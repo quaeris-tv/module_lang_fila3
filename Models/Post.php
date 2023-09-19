@@ -149,19 +149,15 @@ class Post extends Model
     public $incrementing = true;
 
     /**
-     * @var string[]
-     */
-    protected $dates = [
-        'created_at', 'updated_at', 'deleted_at',
-        'published_at',
-    ];
-
-    /**
      * @var array<string, string>
      */
     protected $casts = [
         'image_resize_src' => 'array',
         'url_lang' => 'array',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'deleted_at' => 'datetime',
+        'published_at' => 'datetime',
     ];
 
     /*

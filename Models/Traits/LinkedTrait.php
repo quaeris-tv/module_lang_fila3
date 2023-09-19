@@ -358,22 +358,18 @@ trait LinkedTrait
         $this->setPostAttr(__FUNCTION__, $value);
     }
 
-    /**
-     * @param mixed $value
-     *                     deprecated
+    /**                    deprecated
      *public function setRoutenameAttribute(?string $value) {
      *    return $this->setPostAttr(__FUNCTION__, $value);
      *}
      */
-
     /* deprecated
-    public function setRoutenameAttribute(?string $value) {
-        return $this->setPostAttr(__FUNCTION__, $value);
-    }
-
-    */
+        public function setRoutenameAttribute(?string $value) {
+            return $this->setPostAttr(__FUNCTION__, $value);
+        }
+    
+        */
     // --- attribute e' risertvato
-
     public function setPostAttr(string $func, mixed $value): void
     {
         $str0 = 'set';
