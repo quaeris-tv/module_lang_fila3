@@ -62,27 +62,27 @@ class Translation extends Model
     /**
      * Undocumented function.
      */
-    public function scopeOfTranslatedGroup(Builder $builder, string $group): Builder
+    public function scopeOfTranslatedGroup(Builder $query, string $group): Builder
     {
-        return $builder->where('group', $group)->whereNotNull('value');
+        return $query->where('group', $group)->whereNotNull('value');
     }
 
-    public function scopeOrderByGroupKeys(Builder $builder, bool $ordered): Builder
+    public function scopeOrderByGroupKeys(Builder $query, bool $ordered): Builder
     {
         if ($ordered) {
-            $builder->orderBy('group')->orderBy('key');
+            $query->orderBy('group')->orderBy('key');
         }
 
-        return $builder;
+        return $query;
     }
 
-    public function scopeSelectDistinctGroup(Builder $builder): Builder
+    public function scopeSelectDistinctGroup(Builder $query): Builder
     {
         $select = match (DB::getDriverName()) {
             'mysql' => 'DISTINCT `group`',
             default => 'DISTINCT "group"',
         };
-        return $builder->select(DB::raw($select));
+        return $query->select(DB::raw($select));
     }
 
     /*
