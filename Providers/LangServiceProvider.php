@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Providers;
 
+use Illuminate\Container\Container;
 use Modules\Lang\Services\TranslatorService;
 use Modules\Xot\Providers\XotBaseServiceProvider;
 use Modules\Xot\Services\BladeService;
@@ -11,29 +12,25 @@ use Modules\Xot\Services\BladeService;
 /**
  * Undocumented class.
  */
-class LangServiceProvider extends XotBaseServiceProvider
-{
+class LangServiceProvider extends XotBaseServiceProvider {
     protected string $module_dir = __DIR__;
 
     protected string $module_ns = __NAMESPACE__;
 
     public string $module_name = 'lang';
 
-    public function bootCallback(): void
-    {
+    public function bootCallback(): void {
         // BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Lang');
         $this->registerTranslator();
     }
 
-    public function registerCallback(): void
-    {
+    public function registerCallback(): void {
         // --dalla doc in register ... ma non funziona, funziona in boot
         // $this->registerTranslator();
     }
 
-    public function registerTranslator(): void
-    {
-        $this->app->singleton('translator', function (array $app): TranslatorService {
+    public function registerTranslator(): void {
+        $this->app->singleton('translator', function (Container $app): TranslatorService {
             $loader = $app['translation.loader'];
 
             // When registering the translator component, we'll need to set the default
