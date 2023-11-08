@@ -35,6 +35,7 @@ class LangField implements CastsAttributes
         $post = $model->post;
         $post->{$key} = $value;
         tap($post)->save();
+
         // parent::__construct([]);
         // return [$key => encrypt($value)];
         // return ['created_by' => 'xot'];

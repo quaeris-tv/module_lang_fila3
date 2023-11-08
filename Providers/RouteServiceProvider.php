@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Providers;
 
-use Exception;
 use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
 class RouteServiceProvider extends XotBaseRouteServiceProvider
@@ -38,7 +37,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
         $langs = array_keys($locales);
 
         if (! \is_array($langs)) {
-            throw new Exception('[.__LINE__.]['.class_basename(self::class).']');
+            throw new \Exception('[.__LINE__.]['.class_basename(self::class).']');
         }
         \getRouteParameters();
         $n = 1;

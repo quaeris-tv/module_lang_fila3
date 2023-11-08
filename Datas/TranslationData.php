@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Datas;
 
-use Exception;
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Services\FileService;
 use Spatie\LaravelData\Data;
@@ -24,7 +23,7 @@ class TranslationData extends Data
         $hints = app('translator')->getLoader()->namespaces();
         $path = collect($hints)->get($this->namespace);
         if (null == $path) {
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
         return FileService::fixPath($path.'/'.$this->lang.'/'.$this->group.'.php');
@@ -38,7 +37,7 @@ class TranslationData extends Data
             $data = File::getRequire($filename);
         }
         if (! is_array($data)) {
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 
         return $data;

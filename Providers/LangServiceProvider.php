@@ -12,24 +12,28 @@ use Modules\Xot\Services\BladeService;
 /**
  * Undocumented class.
  */
-class LangServiceProvider extends XotBaseServiceProvider {
+class LangServiceProvider extends XotBaseServiceProvider
+{
     protected string $module_dir = __DIR__;
 
     protected string $module_ns = __NAMESPACE__;
 
     public string $module_name = 'lang';
 
-    public function bootCallback(): void {
+    public function bootCallback(): void
+    {
         // BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Lang');
         $this->registerTranslator();
     }
 
-    public function registerCallback(): void {
+    public function registerCallback(): void
+    {
         // --dalla doc in register ... ma non funziona, funziona in boot
         // $this->registerTranslator();
     }
 
-    public function registerTranslator(): void {
+    public function registerTranslator(): void
+    {
         $this->app->singleton('translator', function (Container $app): TranslatorService {
             $loader = $app['translation.loader'];
 
@@ -41,6 +45,7 @@ class LangServiceProvider extends XotBaseServiceProvider {
             $translatorService = new TranslatorService($loader, $locale);
 
             $translatorService->setFallback($app['config']['app.fallback_locale']);
+
             /*
             if($app->bound('translation-manager')){
                 $trans->setTranslationManager($app['translation-manager']);

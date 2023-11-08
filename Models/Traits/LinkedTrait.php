@@ -8,27 +8,26 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Models\Traits;
 
-use Modules\User\Models\User;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
-use ReflectionException;
-use Modules\Lang\Models\BaseModelLang;
-use Illuminate\Database\Eloquent\Builder;
 use Exception;
+use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Database\Eloquent\Relations\Relation;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Route;
 // use Illuminate\Support\Facades\URL;
 // use Laravel\Scout\Searchable;
-use Illuminate\Support\Facades\App;
-// use Modules\Blog\Models\Favorite;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+// use Modules\Blog\Models\Favorite;
 use Modules\Cms\Services\PanelService;
 use Modules\Cms\Services\RouteService;
+use Modules\Lang\Models\BaseModelLang;
 use Modules\Lang\Models\Post;
 use Modules\Tenant\Services\TenantService;
+use Modules\User\Models\User;
 use Modules\Xot\Models\Image;
 
 // per dizionario morph
@@ -37,7 +36,7 @@ use Modules\Xot\Models\Image;
  * Modules\Lang\Models\Traits\LinkedTrait.
  *
  * @property User|null $user
- * @property Post $post
+ * @property Post      $post
  */
 trait LinkedTrait
 {
@@ -51,7 +50,7 @@ trait LinkedTrait
      * ----.
      *
      * @throws FileNotFoundException
-     * @throws ReflectionException
+     * @throws \ReflectionException
      */
     public function post(): MorphOne
     {
@@ -361,13 +360,13 @@ trait LinkedTrait
     /**                    deprecated
      *public function setRoutenameAttribute(?string $value) {
      *    return $this->setPostAttr(__FUNCTION__, $value);
-     *}
+     *}.
      */
     /* deprecated
         public function setRoutenameAttribute(?string $value) {
             return $this->setPostAttr(__FUNCTION__, $value);
         }
-    
+
         */
     // --- attribute e' risertvato
     public function setPostAttr(string $func, mixed $value): void
@@ -392,7 +391,7 @@ trait LinkedTrait
         $post = $this->post;
         if (null == $post) {
             $this->post()->updateOrCreate($data);
-            // dddx($data);
+        // dddx($data);
         } else {
             $post->update($data);
         }
@@ -420,43 +419,43 @@ trait LinkedTrait
            $act = Str::snake($name);
            $act = substr($act, 0, -4);
            $url = RouteService::urlModel(['model' => $this, 'act' => $act]);
-    
+
            return $url;
        }
-    
-    
+
+
        public function getEditUrlAttribute($value) {
            return $this->urlActFunc(__FUNCTION__, $value);
        }
-    
+
        public function getMoveupUrlAttribute($value) {
            return $this->urlActFunc(__FUNCTION__, $value);
        }
-    
+
        public function getMovedownUrlAttribute($value) {
            return $this->urlActFunc(__FUNCTION__, $value);
        }
-    
+
        public function getShowUrlAttribute($value) {
            return $this->urlActFunc(__FUNCTION__, $value);
        }
-    
+
        public function getIndexEditUrlAttribute($value) {
            return $this->urlActFunc(__FUNCTION__, $value);
        }
-    
+
        public function getCreateUrlAttribute($value) {
            return $this->urlActFunc(__FUNCTION__, $value);
        }
-    
+
        public function getUpdateUrlAttribute($value) {
            return $this->urlActFunc(__FUNCTION__, $value);
        }
-    
+
        public function getDestroyUrlAttribute($value) {
            return $this->urlActFunc(__FUNCTION__, $value);
        }
-    
+
        public function getDetachUrlAttribute($value) {
            return $this->urlActFunc(__FUNCTION__, $value);
        }
@@ -469,25 +468,25 @@ trait LinkedTrait
            if (isset($this->post)) {
                $value = $this->post->imageResizeSrc($params);
            }
-    
+
            return $value;
        }
-    
+
        public function image_html(array $params){
            $value = null;
            if (isset($this->post)) {
                $value = $this->post->image_html($params);
            }
-    
+
            return $value;
        }
-    
+
        public function urlLang(array $params){
            return '['.__FILE__.']['.__LINE__.']';
            if (! isset($this->post)) {
                return '#';
            }
-    
+
            return $this->post->urlLang($params);
        }
        */
@@ -537,7 +536,7 @@ trait LinkedTrait
 
     /**
      * @throws FileNotFoundException
-     * @throws ReflectionException
+     * @throws \ReflectionException
      */
     public function fixItemLang(string $item_guid): void
     {
@@ -569,7 +568,7 @@ trait LinkedTrait
         // getRouteKeyName
         if (RouteService::inAdmin()) {
             return $query->where('post_id', $guid);
-            // return $query->where('post.post_id',$guid);
+        // return $query->where('post.post_id',$guid);
         } else {
             return $query->whereHas(
                 'post',

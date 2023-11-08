@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Lang\View\Composers;
 
-use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Modules\Lang\Datas\LangData;
@@ -25,7 +24,7 @@ class ThemeComposer
         app()->getLocale();
         $langs = config('laravellocalization.supportedLocales');
         if (! is_array($langs)) {
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
+            throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
         $langs = collect($langs)->map(
             function (array $item, $k): array {
@@ -67,7 +66,7 @@ class ThemeComposer
         return $this->languages()
             ->filter(function ($item) use ($curr): bool {
                 if (! $item instanceof LangData) {
-                    throw new Exception('['.__LINE__.']['.__FILE__.']');
+                    throw new \Exception('['.__LINE__.']['.__FILE__.']');
                 }
 
                 return $item->id != $curr;
@@ -80,7 +79,7 @@ class ThemeComposer
         $lang = $this->languages()->first(
             function ($item) use ($curr): bool {
                 if (! $item instanceof LangData) {
-                    throw new Exception('['.__LINE__.']['.__FILE__.']');
+                    throw new \Exception('['.__LINE__.']['.__FILE__.']');
                 }
 
                 return $item->id == $curr;

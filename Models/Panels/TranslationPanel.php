@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Models\Panels;
 
-use Modules\Lang\Models\Panels\Actions\PublishItemTransAction;
-use Modules\Lang\Models\Panels\Actions\PublishContainerTransAction;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Modules\Cms\Contracts\RowsContract;
 use Modules\Cms\Models\Panels\XotBasePanel;
+use Modules\Lang\Models\Panels\Actions\PublishContainerTransAction;
+use Modules\Lang\Models\Panels\Actions\PublishItemTransAction;
 use Modules\Lang\Models\Translation;
 
 class TranslationPanel extends XotBasePanel
