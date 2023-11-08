@@ -48,7 +48,7 @@ class ManageLangModule extends Component
 
         $files = File::files($this->path);
         $files = collect($files)->filter(
-            fn($file): bool => 'php' === $file->getExtension()
+            fn ($file): bool => 'php' === $file->getExtension()
         );
 
         /**
@@ -75,7 +75,7 @@ class ManageLangModule extends Component
 
         // $form_data = File::getRequire($this->path.'/'.$lang_name.'.php');
 
-        $this->emit('editModalArray', $form_data);
+        $this->dispatch('editModalArray', $form_data);
     }
 
     /**
