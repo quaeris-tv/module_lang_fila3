@@ -16,7 +16,7 @@ use Illuminate\Support\Carbon;
 /**
  * Modules\Lang\Models\Translation.
  *
- * @property int         $id
+ * @property int $id
  * @property string|null $lang
  * @property string|null $key
  * @property string|null $value
@@ -24,10 +24,9 @@ use Illuminate\Support\Carbon;
  * @property string|null $updated_by
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * @property string      $namespace
- * @property string      $group
+ * @property string $namespace
+ * @property string $group
  * @property string|null $item
- *
  * @method static Builder|Translation newModelQuery()
  * @method static Builder|Translation newQuery()
  * @method static Builder|Translation ofTranslatedGroup(string $group)
@@ -45,8 +44,6 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Translation whereUpdatedAt($value)
  * @method static Builder|Translation whereUpdatedBy($value)
  * @method static Builder|Translation whereValue($value)
- *
- * @mixin IdeHelperTranslation
  * @mixin \Eloquent
  */
 class Translation extends Model
