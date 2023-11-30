@@ -48,7 +48,7 @@ use Illuminate\Support\Carbon;
  *
  * @mixin \Eloquent
  */
-class Translation extends Model
+class Translation extends BaseModel
 {
     protected $fillable = ['id', 'lang', 'value', 'created_at', 'updated_at', 'namespace', 'group', 'item'];
 
