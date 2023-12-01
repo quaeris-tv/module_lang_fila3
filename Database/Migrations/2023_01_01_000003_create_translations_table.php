@@ -20,7 +20,7 @@ class CreateTranslationsTable extends XotBaseMigration
     {
         // -- CREATE --
         $this->tableCreate(
-            function (Blueprint $blueprint): void {
+            static function (Blueprint $blueprint): void {
                 $blueprint->collation = 'utf8mb4_bin';
                 $blueprint->increments('id');
                 // $table->integer('status')->default(0);
@@ -48,6 +48,10 @@ class CreateTranslationsTable extends XotBaseMigration
                 }
                 if (! $this->hasColumn('value')) {
                     $blueprint->text('value')->nullable();
+                }
+
+                if (! $this->hasColumn('created_by')) {
+                    $this->updateTimestamps($blueprint);
                 }
             }
         );
