@@ -27,24 +27,26 @@ use Illuminate\Support\Carbon;
  * @property string      $namespace
  * @property string      $group
  * @property string|null $item
- * @method static Builder|Translation newModelQuery()
- * @method static Builder|Translation newQuery()
- * @method static Builder|Translation ofTranslatedGroup(string $group)
- * @method static Builder|Translation orderByGroupKeys(bool $ordered)
- * @method static Builder|Translation query()
- * @method static Builder|Translation selectDistinctGroup()
- * @method static Builder|Translation whereCreatedAt($value)
- * @method static Builder|Translation whereCreatedBy($value)
- * @method static Builder|Translation whereGroup($value)
- * @method static Builder|Translation whereId($value)
- * @method static Builder|Translation whereItem($value)
- * @method static Builder|Translation whereKey($value)
- * @method static Builder|Translation whereLang($value)
- * @method static Builder|Translation whereNamespace($value)
- * @method static Builder|Translation whereUpdatedAt($value)
- * @method static Builder|Translation whereUpdatedBy($value)
- * @method static Builder|Translation whereValue($value)
+ *
+ * @method static Builder|Translation                                 newModelQuery()
+ * @method static Builder|Translation                                 newQuery()
+ * @method static Builder|Translation                                 ofTranslatedGroup(string $group)
+ * @method static Builder|Translation                                 orderByGroupKeys(bool $ordered)
+ * @method static Builder|Translation                                 query()
+ * @method static Builder|Translation                                 selectDistinctGroup()
+ * @method static Builder|Translation                                 whereCreatedAt($value)
+ * @method static Builder|Translation                                 whereCreatedBy($value)
+ * @method static Builder|Translation                                 whereGroup($value)
+ * @method static Builder|Translation                                 whereId($value)
+ * @method static Builder|Translation                                 whereItem($value)
+ * @method static Builder|Translation                                 whereKey($value)
+ * @method static Builder|Translation                                 whereLang($value)
+ * @method static Builder|Translation                                 whereNamespace($value)
+ * @method static Builder|Translation                                 whereUpdatedAt($value)
+ * @method static Builder|Translation                                 whereUpdatedBy($value)
+ * @method static Builder|Translation                                 whereValue($value)
  * @method static \Modules\Lang\Database\Factories\TranslationFactory factory($count = null, $state = [])
+ *
  * @mixin \Eloquent
  */
 class Translation extends BaseModel

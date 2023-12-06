@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace Modules\Lang\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
-
 use Modules\Lang\Models\Translation;
 
-class TranslationFactory extends Factory {
+class TranslationFactory extends Factory
+{
     /**
      * The name of the factory's corresponding model.
      *
@@ -22,9 +21,8 @@ class TranslationFactory extends Factory {
      *
      * @return array
      */
-    public function definition() {
-
-
+    public function definition()
+    {
         return [
             'id' => $this->faker->randomNumber,
             'lang' => $this->faker->word,
@@ -33,7 +31,7 @@ class TranslationFactory extends Factory {
             'updated_at' => $this->faker->dateTime,
             'namespace' => $this->faker->word,
             'group' => $this->faker->word,
-            'item' => $this->faker->word
+            'item' => $this->faker->word,
         ];
     }
 }
