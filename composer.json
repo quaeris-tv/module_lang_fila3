@@ -20,16 +20,15 @@
         "spatie/laravel-sluggable": "^3.4"
     },
     "require-dev": {
-        "larastan/larastan": "^2.0.1",
         "laravel/pint": "^1.0",
         "nunomaduro/collision": "^7.9",
+        "larastan/larastan": "^2.0.1",
         "orchestra/testbench": "^8.0",
         "pestphp/pest": "^2.0",
         "pestphp/pest-plugin-arch": "^2.0",
         "pestphp/pest-plugin-laravel": "^2.0",
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
-        "psalm/plugin-laravel": "*",
         "spatie/laravel-ray": "^1.26"
     },
     "repositories": [
