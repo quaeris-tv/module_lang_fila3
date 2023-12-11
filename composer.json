@@ -12,10 +12,10 @@
         "php": "^8.1",
         "illuminate/contracts": "^10.0",
         "illuminate/support": "^10.0",
-        "laraxot/module_cms": "dev-master",
-        "laraxot/module_lu": "dev-master",
-        "laraxot/module_tenant": "dev-master",
-        "laraxot/module_xot": "dev-master",
+        "laraxot/module_cms_fila3": "dev-master",
+        "laraxot/module_user_fila3": "dev-master",
+        "laraxot/module_tenant_fila3": "dev-master",
+        "laraxot/module_xot_fila3": "dev-master",
         "spatie/laravel-package-tools": "^1.11.3",
         "spatie/laravel-sluggable": "^3.4"
     },
@@ -31,6 +31,20 @@
         "phpstan/phpstan-phpunit": "^1.0",
         "spatie/laravel-ray": "^1.26"
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../Xot"
+        },
+        {
+            "type": "path",
+            "url": "../Tenant"
+        },
+        {
+            "type": "path",
+            "url": "../UI"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Modules\\Lang\\": ""
