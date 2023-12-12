@@ -38,3 +38,5 @@ package-lock.json
 
 /.git-rewrite
 /build
+.git-blame-ignore-revs
+package-lock.json
