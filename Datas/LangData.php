@@ -9,7 +9,10 @@ use Spatie\LaravelData\Data;
 class LangData extends Data
 {
     public string $id;
+
     public string $name;
+
     public string $flag;
+
     public string $url;
 }

@@ -92,10 +92,11 @@ use Spatie\Sluggable\SlugOptions;
  */
 class Post extends Model
 {
+    use HasFactory;
+    use HasSlug;
     // use Cachable;
     use Updater;
-    use HasSlug;
-    use HasFactory;
+
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -217,7 +218,7 @@ class Post extends Model
      */
     public function getTitleAttribute(?string $value): ?string
     {
-        if (null !== $value) {
+        if ($value !== null) {
             return $value;
         }
 
@@ -239,14 +240,14 @@ class Post extends Model
      */
     public function getGuidAttribute(?string $value): ?string
     {
-        if (\is_string($value) && '' !== $value && ! str_contains($value, ' ')) {
+        if (\is_string($value) && $value !== '' && ! str_contains($value, ' ')) {
             return $value;
         }
         $value = $this->title;
-        if ('' === $value) {
+        if ($value === '') {
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
         }
-        if (null === $value) {
+        if ($value === null) {
             $value = 'u-'.random_int(1, 1000);
         }
         $value = Str::slug($value);

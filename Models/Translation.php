@@ -54,6 +54,7 @@ class Translation extends BaseModel
     protected $fillable = ['id', 'lang', 'value', 'created_at', 'updated_at', 'namespace', 'group', 'item'];
 
     final public const STATUS_SAVED = 0;
+
     final public const STATUS_CHANGED = 1;
 
     // protected $table = 'ltm_translations';

@@ -12,9 +12,13 @@ class TranslationData extends Data
 {
     // public string $id
     public string $lang;
+
     public string $namespace;
+
     public string $group;
+
     public string $item;
+
     // public string $key;
     public null|int|string $value = null;
 
@@ -22,7 +26,7 @@ class TranslationData extends Data
     {
         $hints = app('translator')->getLoader()->namespaces();
         $path = collect($hints)->get($this->namespace);
-        if (null == $path) {
+        if ($path == null) {
             throw new \Exception('['.__LINE__.']['.__FILE__.']');
         }
 

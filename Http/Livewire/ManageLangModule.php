@@ -19,7 +19,9 @@ use Nwidart\Modules\Facades\Module;
 class ManageLangModule extends Component
 {
     public string $module_name;
+
     public string $lang_name;
+
     public string $path;
 
     /**
@@ -48,7 +50,7 @@ class ManageLangModule extends Component
 
         $files = File::files($this->path);
         $files = collect($files)->filter(
-            fn ($file): bool => 'php' === $file->getExtension()
+            fn ($file): bool => $file->getExtension() === 'php'
         );
 
         /**
