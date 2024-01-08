@@ -50,7 +50,7 @@ class ManageLangModule extends Component
 
         $files = File::files($this->path);
         $files = collect($files)->filter(
-            fn ($file): bool => $file->getExtension() === 'php'
+            fn ($file): bool => 'php' === $file->getExtension()
         );
 
         /**

@@ -218,7 +218,7 @@ class Post extends Model
      */
     public function getTitleAttribute(?string $value): ?string
     {
-        if ($value !== null) {
+        if (null !== $value) {
             return $value;
         }
 
@@ -240,14 +240,14 @@ class Post extends Model
      */
     public function getGuidAttribute(?string $value): ?string
     {
-        if (\is_string($value) && $value !== '' && ! str_contains($value, ' ')) {
+        if (\is_string($value) && '' !== $value && ! str_contains($value, ' ')) {
             return $value;
         }
         $value = $this->title;
-        if ($value === '') {
+        if ('' === $value) {
             $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
         }
-        if ($value === null) {
+        if (null === $value) {
             $value = 'u-'.random_int(1, 1000);
         }
         $value = Str::slug($value);
