@@ -2,7 +2,10 @@
     "name": "laraxot/module_lang_fila3",
     "description": "",
     "license": "MIT",
+<<<<<<< HEAD
     "homepage": "https://github.com/laraxot/module_lang_fila3.git",
+=======
+>>>>>>> dev
     "authors": [
         {
             "name": "Marco Sottana",

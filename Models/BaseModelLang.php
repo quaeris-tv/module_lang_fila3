@@ -21,11 +21,17 @@ use Modules\Xot\Traits\Updater;
 abstract class BaseModelLang extends Model
 {
     use HasFactory;
+<<<<<<< HEAD
 
     // use Searchable;
     use LinkedTrait;
     use Updater;
 
+=======
+    // use Searchable;
+    use LinkedTrait;
+    use Updater;
+>>>>>>> dev
     /**
      * Indicates whether attributes are snake cased on arrays.
      *

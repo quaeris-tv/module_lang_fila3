@@ -12,6 +12,7 @@ class TranslationData extends Data
 {
     // public string $id
     public string $lang;
+<<<<<<< HEAD
 
     public string $namespace;
 
@@ -19,6 +20,11 @@ class TranslationData extends Data
 
     public string $item;
 
+=======
+    public string $namespace;
+    public string $group;
+    public string $item;
+>>>>>>> dev
     // public string $key;
     public null|int|string $value = null;
 

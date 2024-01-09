@@ -19,9 +19,13 @@ use Nwidart\Modules\Facades\Module;
 class ManageLangModule extends Component
 {
     public string $module_name;
+<<<<<<< HEAD
 
     public string $lang_name;
 
+=======
+    public string $lang_name;
+>>>>>>> dev
     public string $path;
 
     /**
