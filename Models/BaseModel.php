@@ -19,17 +19,11 @@ use Modules\Xot\Traits\Updater;
 abstract class BaseModel extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
 
     // use Searchable;
     // use Cachable;
     use Updater;
 
-=======
-    // use Searchable;
-    // use Cachable;
-    use Updater;
->>>>>>> dev
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -50,44 +44,24 @@ abstract class BaseModel extends Model
      * @var string[]
      */
     protected $fillable = ['id'];
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
     /**
      * @var array<string, string>
      */
     protected $casts = ['published_at' => 'datetime', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
     /**
      * @var string
      */
     protected $primaryKey = 'id';
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
     /**
      * @var bool
      */
     public $incrementing = true;
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
     /**
      * @var array<int, string>
      */
     protected $hidden = [
         // 'password'
     ];
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
     /**
      * @var bool
      */

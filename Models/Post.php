@@ -92,18 +92,11 @@ use Spatie\Sluggable\SlugOptions;
  */
 class Post extends Model
 {
-<<<<<<< HEAD
     use HasFactory;
     use HasSlug;
     // use Cachable;
     use Updater;
 
-=======
-    // use Cachable;
-    use Updater;
-    use HasSlug;
-    use HasFactory;
->>>>>>> dev
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
