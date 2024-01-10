@@ -9,7 +9,7 @@ use Modules\Lang\Models\Post;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
 /**
- * Class CreatePostsTable.
+ * Class CreateLangPostsTable.
  */
 class CreateLangPostsTable extends XotBaseMigration
 {
