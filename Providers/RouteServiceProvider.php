@@ -45,7 +45,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
             $n = 3;
         }
 
-        if (\in_array(request()->segment($n), $langs, true)) {
+        if (\in_array(request()->segment($n),  $langs, false)) {
             $lang = request()->segment($n);
             app()->setLocale($lang);
         }
