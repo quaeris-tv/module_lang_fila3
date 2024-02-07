@@ -8,7 +8,7 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Lang;
 use Livewire\Component;
-use Modules\Cms\Actions\GetViewAction;
+use Modules\Xot\Actions\GetViewAction;
 use Modules\Xot\Services\ArrayService;
 use Modules\Xot\Services\FileService;
 use Nwidart\Modules\Facades\Module;

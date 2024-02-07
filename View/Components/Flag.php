@@ -6,7 +6,7 @@ namespace Modules\Lang\View\Components;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\View\Component;
-use Modules\Cms\Actions\GetViewAction;
+use Modules\Xot\Actions\GetViewAction;
 
 /**
  * Undocumented class.
