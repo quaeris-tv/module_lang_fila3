@@ -20,7 +20,7 @@ class TranslationData extends Data
     public string $item;
 
     // public string $key;
-    public null|int|string $value = null;
+    public int|string|null $value = null;
 
     public function getFilename(): string
     {
