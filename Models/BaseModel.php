@@ -33,7 +33,10 @@ abstract class BaseModel extends Model
      */
     public static $snakeAttributes = true;
 
-    protected $perPage = 30;
+    /**
+* @var int
+*/
+protected $perPage = 30;
 
     /**
      * @var string

@@ -35,7 +35,10 @@ abstract class BaseModelLang extends Model
      */
     public static $snakeAttributes = true;
 
-    protected $perPage = 30;
+    /**
+* @var int
+*/
+protected $perPage = 30;
 
     protected $connection = 'mysql'; // this will use the specified database connection
 
