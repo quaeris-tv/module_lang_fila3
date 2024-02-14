@@ -137,7 +137,7 @@ class Post extends Model
     ];
 
     /**
-     * @var array
+     * @var array<int, string>
      */
     protected $appends = [];
 
