@@ -107,9 +107,9 @@ class Post extends Model
     public static $snakeAttributes = true;
 
     /**
-* @var int
-*/
-protected $perPage = 30;
+     * @var int
+     */
+    protected $perPage = 30;
 
     // use Searchable;
     /**
