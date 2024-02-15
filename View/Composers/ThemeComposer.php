@@ -52,9 +52,10 @@ class ThemeComposer
         );
 
         /**
-         * @var  DataCollection<LangData>
+         * @var DataCollection<LangData>
          */
-        $res= LangData::collect($langs->all());
+        $res = LangData::collect($langs->all());
+
         return $res;
     }
 
