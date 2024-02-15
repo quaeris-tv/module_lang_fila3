@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Providers;
 
-use Webmozart\Assert\Assert;
 use Illuminate\Container\Container;
-use Modules\Xot\Services\BladeService;
 use Modules\Lang\Services\TranslatorService;
 use Modules\Xot\Providers\XotBaseServiceProvider;
+use Modules\Xot\Services\BladeService;
+use Webmozart\Assert\Assert;
 
 /**
  * Undocumented class.
@@ -42,7 +42,7 @@ class LangServiceProvider extends XotBaseServiceProvider
             // locale as well as the fallback locale. So, we'll grab the application
             // configuration so we can easily get both of these values from there.
             Assert::string($locale = $app['config']['app.locale']);
-            Assert::string($fallback_locale=$app['config']['app.fallback_locale']);
+            Assert::string($fallback_locale = $app['config']['app.fallback_locale']);
 
             $translatorService = new TranslatorService($loader, $locale);
 
