@@ -51,7 +51,7 @@ class ThemeComposer
             }
         );
 
-        return LangData::collection($langs->all());
+        return LangData::collect($langs->all());
     }
 
     /**
