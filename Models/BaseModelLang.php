@@ -40,26 +40,19 @@ abstract class BaseModelLang extends Model
      */
     protected $perPage = 30;
 
+    /** @var string */
     protected $connection = 'mysql'; // this will use the specified database connection
 
-    /**
-     * @var string[]
-     */
+    /** @var array<int, string> */
     protected $fillable = ['id'];
 
-    /**
-     * @var array<string, string>
-     */
+    /** @var array<string, string> */
     protected $casts = ['published_at' => 'datetime', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $primaryKey = 'id';
 
-    /**
-     * @var bool
-     */
+    /** @var bool */
     public $incrementing = true;
 
     /**
@@ -69,9 +62,7 @@ abstract class BaseModelLang extends Model
         // 'password'
     ];
 
-    /**
-     * @var bool
-     */
+    /** @var bool */
     public $timestamps = true;
 
     // -----------

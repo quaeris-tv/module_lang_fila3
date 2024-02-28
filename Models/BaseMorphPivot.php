@@ -33,24 +33,16 @@ abstract class BaseMorphPivot extends MorphPivot
      */
     protected $appends = [];
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $primaryKey = 'id';
 
-    /**
-     * @var bool
-     */
+    /** @var bool */
     public $incrementing = true;
 
-    /**
-     * @var bool
-     */
+    /** @var bool */
     public $timestamps = true;
 
-    /**
-     * @var string[]
-     */
+    /** @var array<int, string> */
     protected $fillable = [
         'id',
         'post_id', 'post_type',

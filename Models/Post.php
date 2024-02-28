@@ -112,14 +112,10 @@ class Post extends Model
     protected $perPage = 30;
 
     // use Searchable;
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $connection = 'mysql';
 
-    /**
-     * @var string[]
-     */
+    /** @var array<int, string> */
     protected $fillable = [
         'id', 'user_id', 'post_id', 'lang', 'guid',
         'title',
@@ -141,19 +137,13 @@ class Post extends Model
      */
     protected $appends = [];
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $primaryKey = 'id';
 
-    /**
-     * @var bool
-     */
+    /** @var bool */
     public $incrementing = true;
 
-    /**
-     * @var array<string, string>
-     */
+    /** @var array<string, string> */
     protected $casts = [
         'image_resize_src' => 'array',
         'url_lang' => 'array',
