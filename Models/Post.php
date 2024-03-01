@@ -132,9 +132,7 @@ class Post extends Model
         'image_resize_src', // buffer
     ];
 
-    /**
-     * @var array<int, string>
-     */
+    /** @var array<int, string> */
     protected $appends = [];
 
     /** @var string */
