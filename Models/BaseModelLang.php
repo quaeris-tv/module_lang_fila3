@@ -6,13 +6,13 @@ namespace Modules\Lang\Models;
 
 // //use Laravel\Scout\Searchable;
 // ---------- traits
-use Modules\Xot\Traits\Updater;
-use Illuminate\Database\Eloquent\Model;
-use Modules\Xot\Services\FactoryService;
-use Modules\Lang\Models\Traits\LinkedTrait;
-use Modules\Xot\Actions\Factory\GetFactoryAction;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Lang\Models\Traits\LinkedTrait;
+use Modules\Xot\Actions\Factory\GetFactoryAction;
+use Modules\Xot\Services\FactoryService;
+use Modules\Xot\Traits\Updater;
 
 /**
  * Class BaseModelLang.
