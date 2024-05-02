@@ -7,11 +7,12 @@ namespace Modules\Lang\Models;
 // use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 // use Laravel\Scout\Searchable;
 // ---------- traits
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Modules\Xot\Traits\Updater;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Xot\Services\FactoryService;
-use Modules\Xot\Traits\Updater;
+use Modules\Xot\Actions\Factory\GetFactoryAction;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Class BaseModel.
@@ -63,6 +64,6 @@ abstract class BaseModel extends Model
      */
     protected static function newFactory()
     {
-        return FactoryService::newFactory(static::class);
+        return app(GetFactoryAction::class)->execute(static::class);
     }
 }

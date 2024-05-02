@@ -7,10 +7,11 @@ namespace Modules\Lang\Actions;
 use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
-use Modules\Lang\Datas\TranslationData;
-use Modules\Xot\Services\ArrayService;
 use Modules\Xot\Services\FileService;
+use Modules\Xot\Services\ArrayService;
+use Modules\Lang\Datas\TranslationData;
 use Spatie\QueueableAction\QueueableAction;
+use Modules\Xot\Actions\Array\SaveArrayAction;
 
 class PublishTranslationAction
 {
@@ -40,7 +41,7 @@ class PublishTranslationAction
         $data_up = $data;
         Arr::set($data_up, $translationData->item, $translationData->value);
         if ($data != $data_up) {
-            ArrayService::save(['data' => $data_up, 'filename' => $filename]);
+            app(SaveArrayAction::class)->execute(data: $data_up, filename: $filename);
         }
     }
 }
