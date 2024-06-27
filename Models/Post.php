@@ -113,7 +113,7 @@ class Post extends Model
 
     // use Searchable;
     /** @var string */
-    protected $connection = 'mysql';
+    protected $connection = 'lang';
 
     /** @var array<int, string> */
     protected $fillable = [
