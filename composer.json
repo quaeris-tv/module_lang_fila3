@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "mcamara/laravel-localization": "^2.0",
         "spatie/laravel-sluggable": "*"
     },
     "require_comment": {
@@ -56,10 +57,10 @@
     },
     "scripts": {
         "post-autoload-dump": [
-            "@php vendor/bin/testbench package:discover --ansi"
+            
         ],
         "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+            
         ],
         "analyse": "vendor/bin/phpstan analyse",
         "test": "./vendor/bin/pest --no-coverage",
