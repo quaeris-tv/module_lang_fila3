@@ -34,7 +34,9 @@ class Change extends Component
         $this->url = Request::getRequestUri();
         $langs = Arr::map($langs, function ($item, $key) {
             $url = LaravelLocalization::getLocalizedURL($key, $this->url, [], true);
-            $url = Str::of($url)->replace(url(''), '')->toString();
+            if (is_string($url)) {
+                $url = Str::of($url)->replace(url(''), '')->toString();
+            }
             $item['url'] = $url;
 
             return $item;
@@ -44,7 +46,10 @@ class Change extends Component
 
     public function switchLang(string $lang): Application|RedirectResponse|Redirector
     {
-        $url = LaravelLocalization::getLocalizedURL($lang, $this->url);
+        $url = LaravelLocalization::getLocalizedURL($lang, $this->url, [], true);
+        if (false === $url) {
+            throw new \Exception('url not found['.__LINE__.']['.__FILE__.']');
+        }
 
         return redirect($url, 303);
     }
