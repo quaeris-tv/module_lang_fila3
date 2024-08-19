@@ -13,6 +13,7 @@ use Modules\Xot\Traits\Updater;
 abstract class BaseMorphPivot extends MorphPivot
 {
     use Updater;
+
     /**
      * Indicates whether attributes are snake cased on arrays.
      *
@@ -26,6 +27,7 @@ abstract class BaseMorphPivot extends MorphPivot
      * @var int
      */
     protected $perPage = 30;
+
     protected $connection = 'lang';
 
     /** @var array<int, string> */
@@ -48,5 +50,6 @@ abstract class BaseMorphPivot extends MorphPivot
         'user_id',
         'note',
     ];
+
     protected $casts = ['created_at' => 'datetime', 'updated_at' => 'datetime', 'deleted_at' => 'datetime'];
 }
