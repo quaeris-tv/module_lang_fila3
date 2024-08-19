@@ -20,6 +20,8 @@ use Modules\User\Models\User;
  * Modules\Lang\Models\Traits\LinkedTrait.
  *
  * @property User|null $user
- * @property Post $post
+ * @property Post      $post
  */
-trait LinkedTrait {}
+trait LinkedTrait
+{
+}
