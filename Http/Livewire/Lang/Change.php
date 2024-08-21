@@ -36,7 +36,7 @@ class Change extends Component
         $this->url = Request::getRequestUri();
         $langs = Arr::map($langs, function ($item, $key) {
             $url = LaravelLocalization::getLocalizedURL($key, $this->url, [], true);
-            if (false !== $url) {
+            if ($url !== false) {
                 $url = Str::of($url)->replace(url(''), '')->toString();
             }
             $item['url'] = $url;
