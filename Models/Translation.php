@@ -47,8 +47,8 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Translation                                 whereValue($value)
  * @method static \Modules\Lang\Database\Factories\TranslationFactory factory($count = null, $state = [])
  *
- * @property \Modules\Fixcity\Models\Profile|null $creator
- * @property \Modules\Fixcity\Models\Profile|null $updater
+ * @property \Modules\Xot\Contracts\ProfileContract|null $creator
+ * @property \Modules\Xot\Contracts\ProfileContract|null $updater
  *
  * @mixin \Eloquent
  */
