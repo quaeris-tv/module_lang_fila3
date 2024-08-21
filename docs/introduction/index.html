@@ -9,33 +9,32 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Module Lang</title>
-    <meta name="title" content="Module Lang">
-    <meta name="description" content="Modulo dedicato alla gestione delle traduzioni">
+    <title>Introducendo Lang</title>
+    <meta name="title" content="Introducendo Lang">
+    <meta name="description" content="Introduzione a Module Lang">
 
     <!-- Canonical -->
-    <link rel="canonical" href="/">
+    <link rel="canonical" href="/docs/introduction/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/">
-    <meta property="og:title" content="Module Lang">
-    <meta property="og:description" content="Modulo dedicato alla gestione delle traduzioni">
+    <meta property="og:url" content="/docs/introduction/">
+    <meta property="og:title" content="Introducendo Lang">
+    <meta property="og:description" content="Introduzione a Module Lang">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/">
-    <meta property="twitter:title" content="Module Lang">
-    <meta property="twitter:description" content="Modulo dedicato alla gestione delle traduzioni">
+    <meta property="twitter:url" content="/docs/introduction/">
+    <meta property="twitter:title" content="Introducendo Lang">
+    <meta property="twitter:description" content="Introduzione a Module Lang">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="resources/css/retype.css?v=3.5.0.777540614715" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.777540614715" rel="stylesheet">
 
-    <script data-cfasync="false" src="resources/js/config.js?v=3.5.0.777540614715" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="resources/js/lunr.js?v=3.5.0.777540614715" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="resources/js/prism.js?v=3.5.0.777540614715" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.777540614715" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.777540614715" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -50,7 +49,7 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
                             <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">Project Name</span>
                         </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Docs</span>
                     </div>
@@ -164,45 +163,17 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="module-lang" class="break-words">
+<doc-anchor-target id="introducendo-lang" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#module-lang">#</doc-anchor-trigger>
-        <span>Module Lang</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#introducendo-lang">#</doc-anchor-trigger>
+        <span>Introducendo Lang</span>
     </h1>
 </doc-anchor-target>
-<p>Modulo dedicato alla gestione delle traduzioni</p>
-<doc-anchor-target id="aggiungere-modulo-nella-base-del-progetto">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#aggiungere-modulo-nella-base-del-progetto">#</doc-anchor-trigger>
-        <span>Aggiungere Modulo nella base del progetto</span>
-    </h2>
-</doc-anchor-target>
-<p>Dentro la cartella laravel/Modules</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">git submodule add https://github.com/laraxot/module_lang_fila3.git Lang</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="verificare-che-il-modulo-sia-attivo">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#verificare-che-il-modulo-sia-attivo">#</doc-anchor-trigger>
-        <span>Verificare che il modulo sia attivo</span>
-    </h2>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">php artisan module:list</code></pre>
-</doc-codeblock></div>
-<p>in caso abilitarlo</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">php artisan module:enable Lang</code></pre>
-</doc-codeblock></div>
-<doc-anchor-target id="eseguire-le-migrazioni">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#eseguire-le-migrazioni">#</doc-anchor-trigger>
-        <span>Eseguire le migrazioni</span>
-    </h2>
-</doc-anchor-target>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">php artisan module:migrate Lang</code></pre>
-</doc-codeblock></div>
+<p>Il module_lang in Laravel è un pacchetto che serve a gestire le traduzioni in lingua.</p>
+<p>In Laravel, le traduzioni servono a consentire all&#x27;applicazione di mostrare testo in diverse lingue.</p>
+<p>Ad esempio, se si sta costruendo un&#x27;applicazione che dovrà essere utilizzata in Italia, Francia e Germania, si potrebbero creare file di lingua per ognuna di queste lingue che contengono le traduzioni del testo utilizzato nell&#x27;applicazione.</p>
+<p>In questo modo, quando l&#x27;applicazione viene utilizzata in Italia, verrà visualizzato il testo tradotto in italiano;</p>
+<p>quando viene utilizzata in Francia, verrà visualizzato il testo tradotto in francese, e così via.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -212,13 +183,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../docs/installation/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Installazione Automatizzata</span>
+                                            </span>
+                                        </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l rounded-r-lg transition-colors duration-150 relative hover:z-5" href="docs/upgrade/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../changelog/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Aggiornamenti</span>
+                                                <span class="block mt-1">Changelog</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -262,6 +240,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Module Lang", isRoot: true, level: 0, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Introducendo Lang", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
