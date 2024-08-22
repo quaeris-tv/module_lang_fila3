@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Schema;
 use Modules\Lang\Models\Post;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-/**
+/*
  * Class CreateLangPostsTable.
  */
-return new class () extends XotBaseMigration {
+return new class extends XotBaseMigration {
     protected ?string $model_class = Post::class;
 
     /**
@@ -153,4 +153,4 @@ return new class () extends XotBaseMigration {
     }
 
     // end up
-};// end class
+}; // end class

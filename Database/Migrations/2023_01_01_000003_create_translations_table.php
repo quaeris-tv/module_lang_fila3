@@ -7,10 +7,10 @@ use Illuminate\Database\Schema\Blueprint;
 use Modules\Lang\Models\Post;
 use Modules\Xot\Database\Migrations\XotBaseMigration;
 
-/**
+/*
  * Class CreateTranslationsTable.
  */
-return new class () extends XotBaseMigration {
+return new class extends XotBaseMigration {
     // protected ?string $model_class = Post::class;
     /**
      * db up.
@@ -57,4 +57,4 @@ return new class () extends XotBaseMigration {
     }
 
     // end up
-};// end class
+}; // end class
