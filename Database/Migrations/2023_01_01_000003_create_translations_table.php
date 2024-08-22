@@ -10,8 +10,7 @@ use Modules\Xot\Database\Migrations\XotBaseMigration;
 /**
  * Class CreateTranslationsTable.
  */
-class CreateTranslationsTable extends XotBaseMigration
-{
+return new class () extends XotBaseMigration {
     // protected ?string $model_class = Post::class;
     /**
      * db up.
@@ -58,4 +57,4 @@ class CreateTranslationsTable extends XotBaseMigration
     }
 
     // end up
-}// end class
+};// end class
