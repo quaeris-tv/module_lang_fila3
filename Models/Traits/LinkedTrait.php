@@ -12,14 +12,14 @@ namespace Modules\Lang\Models\Traits;
 // use Laravel\Scout\Searchable;
 // use Modules\Blog\Models\Favorite;
 use Modules\Lang\Models\Post;
-use Modules\User\Models\User;
+
 
 // per dizionario morph
 // ------ traits ---
 /**
  * Modules\Lang\Models\Traits\LinkedTrait.
  *
- * @property User|null $user
+ * @property \Modules\Xot\Contracts\UserContract|null $user
  * @property Post      $post
  */
 trait LinkedTrait
