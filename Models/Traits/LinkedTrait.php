@@ -13,14 +13,13 @@ namespace Modules\Lang\Models\Traits;
 // use Modules\Blog\Models\Favorite;
 use Modules\Lang\Models\Post;
 
-
 // per dizionario morph
 // ------ traits ---
 /**
  * Modules\Lang\Models\Traits\LinkedTrait.
  *
  * @property \Modules\Xot\Contracts\UserContract|null $user
- * @property Post      $post
+ * @property Post                                     $post
  */
 trait LinkedTrait
 {

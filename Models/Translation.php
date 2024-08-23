@@ -27,6 +27,7 @@ use Illuminate\Support\Carbon;
  * @property string      $namespace
  * @property string      $group
  * @property string|null $item
+ *
  * @method static Builder|Translation                                 newModelQuery()
  * @method static Builder|Translation                                 newQuery()
  * @method static Builder|Translation                                 ofTranslatedGroup(string $group)
@@ -45,8 +46,10 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Translation                                 whereUpdatedBy($value)
  * @method static Builder|Translation                                 whereValue($value)
  * @method static \Modules\Lang\Database\Factories\TranslationFactory factory($count = null, $state = [])
+ *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
+ *
  * @mixin \Eloquent
  */
 class Translation extends BaseModel
