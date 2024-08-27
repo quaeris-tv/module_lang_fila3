@@ -30,7 +30,7 @@ abstract class BaseMorphPivot extends MorphPivot
 
     protected $connection = 'lang';
 
-     /** @var list<string> */
+    /** @var list<string> */
     protected $appends = [];
 
     /** @var string */
