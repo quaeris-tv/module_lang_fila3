@@ -119,7 +119,7 @@ class Post extends Model
     /** @var string */
     protected $connection = 'lang';
 
-    /** @var array<int, string> */
+    /** @var list<string> */
     protected $fillable = [
         'id', 'user_id', 'post_id', 'lang', 'guid',
         'title',
@@ -136,7 +136,7 @@ class Post extends Model
         'image_resize_src', // buffer
     ];
 
-    /** @var array<int, string> */
+     /** @var list<string> */
     protected $appends = [];
 
     /** @var string */
