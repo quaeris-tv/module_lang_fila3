@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Aggiornamenti</title>
-    <meta name="title" content="Aggiornamenti">
-    <meta name="description" content="Aggiornamenti">
+    <title>Links</title>
+    <meta name="title" content="Links">
+    <meta name="description" content="If you need to translate just the text and want to build your own UI - Spatie package is a good choice.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="/docs/upgrade/">
+    <link rel="canonical" href="/docs/links/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/docs/upgrade/">
-    <meta property="og:title" content="Aggiornamenti">
-    <meta property="og:description" content="Aggiornamenti">
+    <meta property="og:url" content="/docs/links/">
+    <meta property="og:title" content="Links">
+    <meta property="og:description" content="If you need to translate just the text and want to build your own UI - Spatie package is a good choice.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/docs/upgrade/">
-    <meta property="twitter:title" content="Aggiornamenti">
-    <meta property="twitter:description" content="Aggiornamenti">
+    <meta property="twitter:url" content="/docs/links/">
+    <meta property="twitter:title" content="Links">
+    <meta property="twitter:description" content="If you need to translate just the text and want to build your own UI - Spatie package is a good choice.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -164,30 +164,88 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="aggiornamenti" class="break-words">
+<doc-anchor-target id="links" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#aggiornamenti">#</doc-anchor-trigger>
-        <span>Aggiornamenti</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#links">#</doc-anchor-trigger>
+        <span>Links</span>
     </h1>
 </doc-anchor-target>
-<p>Cms onsiste in un pacchetto PHP.</p>
-<p>Quindi per aggiornare basta dare il comando in console:</p>
-<p>composer update laraxot/module_lang</p>
-<p>Assicurarsi di cancellare la cache delle viste di Laravel dopo l&#x27;aggiornamento:</p>
+<p>If you need to translate just the text and want to build your own UI - Spatie package is a good choice.
+If you need to translate the routes - Mcamara package
+If you need to translate just the text but don&#x27;t want to build your UI - You can use Nikaia package or MohmmedAshraf package
+If there&#x27;s a need for text and routes - look into combining the packages. For example, you can use Mcamara package and any of the remaining ones for the text.</p>
+<p><a href="https://github.com/Laravel-Lang/lang/blob/main/locales/it/php.json">https://github.com/Laravel-Lang/lang/blob/main/locales/it/php.json</a>
+<a href="https://github.com/LaravelDaily/laravel11-localization-course/tree/lesson/ui-switching">https://github.com/LaravelDaily/laravel11-localization-course/tree/lesson/ui-switching</a>
+<a href="https://github.com/LaravelDaily/laravel11-localization-course/tree/lesson/packages/spatie">https://github.com/LaravelDaily/laravel11-localization-course/tree/lesson/packages/spatie</a>
+<a href="https://github.com/Astrotomic/laravel-translatable">https://github.com/Astrotomic/laravel-translatable</a>
+<a href="https://github.com/mcamara/laravel-localization">https://github.com/mcamara/laravel-localization</a>
+<a href="https://github.com/MohmmedAshraf/laravel-translations">https://github.com/MohmmedAshraf/laravel-translations</a></p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-shell-session"><code v-pre class="language-shell-session">php artisan view:clear</code></pre>
+<pre class="language-php"><code v-pre class="language-php">if(! function_exists('formatCurrency')) {
+    function formatCurrency($amount, $locale = 'en_US', $currency = 'USD')
+    {
+        $formatter = new NumberFormatter($locale, NumberFormatter::CURRENCY);
+        return $formatter-&gt;formatCurrency($amount, $currency);
+    }
+}</code></pre>
 </doc-codeblock></div>
-<p>Infine, se si sono pubblicati il file di configurazione o i modelli Blade, assicurarsi che le personalizzazioni siano aggiornate con i valori predefiniti.</p>
-<doc-anchor-target id="verifica-dei-pacchetti-installati">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#verifica-dei-pacchetti-installati">#</doc-anchor-trigger>
-        <span>Verifica dei pacchetti installati</span>
-    </h3>
-</doc-anchor-target>
-<p>È possibile utilizzare il comando Artisan incorporato per visualizzare le versioni installate dei pacchetti:</p>
+<p>file Http/Middleware/SetLocale.php</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-shell-session"><code v-pre class="language-shell-session">php artisan module_lang:show-versions</code></pre>
+<pre class="language-php"><code v-pre class="language-php">use Auth;
+use Carbon\Carbon;
+ 
+// ...
+ 
+ public function handle(Request $request, Closure $next): Response
+{
+    // Logged-in users use their own language preference
+    if (Auth::check()) {
+        app()-&gt;setLocale(Auth::user()-&gt;language);
+        Carbon::setLocale(Auth::user()-&gt;language);
+    // Guests use the language set in the session
+    } else {
+        app()-&gt;setLocale(session('locale', 'en'));
+        Carbon::setLocale(session('locale', 'en'));
+    }
+ 
+    return $next($request);
+}</code></pre>
 </doc-codeblock></div>
+<p>file resources/views/layouts/navigation.blade.php</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-php"><code v-pre class="language-php">{{-- ... --}}
+@foreach(config('app.available_locales') as $locale)
+    &lt;x-nav-link
+            :href=&quot;route('change-locale', $locale)&quot;
+            :active=&quot;app()-&gt;getLocale() == $locale&quot;&gt;
+        {{ strtoupper($locale) }}
+    &lt;/x-nav-link&gt;
+@endforeach
+&lt;x-dropdown align=&quot;right&quot; width=&quot;48&quot;&gt;
+{{-- ... --}}</code></pre>
+</doc-codeblock></div>
+<p>with mcamara
+<a href="https://laraveldaily.com/lesson/multi-language-laravel/mcamara-laravel-localization">https://laraveldaily.com/lesson/multi-language-laravel/mcamara-laravel-localization</a>
+<a href="https://github.com/LaravelDaily/laravel11-localization-course/tree/lesson/packages/mcamara-laravel-localization">https://github.com/LaravelDaily/laravel11-localization-course/tree/lesson/packages/mcamara-laravel-localization</a></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-php"><code v-pre class="language-php">{{-- ... --}}
+@foreach(LaravelLocalization::getSupportedLocales() as $localeCode =&gt; $properties)
+    &lt;x-nav-link rel=&quot;alternate&quot; hreflang=&quot;{{ $localeCode }}&quot;
+                :active=&quot;$localeCode === app()-&gt;getLocale()&quot;
+                href=&quot;{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}&quot;&gt;
+        {{ ucfirst($properties['native']) }}
+    &lt;/x-nav-link&gt;
+@endforeach
+&lt;x-dropdown align=&quot;right&quot; width=&quot;48&quot;&gt;
+{{-- ... --}}</code></pre>
+</doc-codeblock></div>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">php artisan route:trans:list {locale}</code></pre>
+</doc-codeblock></div>
+<p>with google sheet
+<a href="https://github.com/LaravelDaily/laravel11-localization-course/tree/lesson/packages/nikaia-translation-sheet">https://github.com/LaravelDaily/laravel11-localization-course/tree/lesson/packages/nikaia-translation-sheet</a></p>
+<p>a nice administration
+outhebox/laravel-translations</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -197,20 +255,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../docs/introduction/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Module Lang</span>
+                                                <span class="block mt-1">Introducendo Lang</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../docs/installation/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../changelog/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Installazione Automatizzata</span>
+                                                <span class="block mt-1">Changelog</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -254,6 +312,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Aggiornamenti", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Links", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
