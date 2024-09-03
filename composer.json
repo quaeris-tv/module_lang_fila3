@@ -52,15 +52,17 @@
     ],
     "autoload": {
         "psr-4": {
-            "Modules\\Lang\\": ""
+            "Modules\\Lang\\": "",
+            "Modules\\Lang\\Database\\Factories\\": "database/factories/",
+            "Modules\\Lang\\Database\\Seeders\\": "database/seeders/"
         }
     },
     "scripts": {
         "post-autoload-dump": [
-            
+
         ],
         "post-update-cmd": [
-            
+
         ],
         "analyse": "vendor/bin/phpstan analyse",
         "test": "./vendor/bin/pest --no-coverage",
@@ -85,5 +87,5 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true
-    
+
 }
