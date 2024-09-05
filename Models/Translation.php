@@ -9,8 +9,9 @@ declare(strict_types=1);
 namespace Modules\Lang\Models;
 
 use DB;
-use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Query\Builder as QueryBuilder;
 use Illuminate\Support\Carbon;
 
 /**
@@ -27,7 +28,6 @@ use Illuminate\Support\Carbon;
  * @property string      $namespace
  * @property string      $group
  * @property string|null $item
- *
  * @method static Builder|Translation                                 newModelQuery()
  * @method static Builder|Translation                                 newQuery()
  * @method static Builder|Translation                                 ofTranslatedGroup(string $group)
@@ -46,19 +46,17 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Translation                                 whereUpdatedBy($value)
  * @method static Builder|Translation                                 whereValue($value)
  * @method static \Modules\Lang\Database\Factories\TranslationFactory factory($count = null, $state = [])
- *
  * @property \Modules\Xot\Contracts\ProfileContract|null $creator
  * @property \Modules\Xot\Contracts\ProfileContract|null $updater
- *
  * @mixin \Eloquent
  */
 class Translation extends BaseModel
 {
-    protected $fillable = ['id', 'lang', 'value', 'created_at', 'updated_at', 'namespace', 'group', 'item'];
-
     final public const STATUS_SAVED = 0;
 
     final public const STATUS_CHANGED = 1;
+
+    protected $fillable = ['id', 'lang', 'value', 'created_at', 'updated_at', 'namespace', 'group', 'item'];
 
     // protected $table = 'ltm_translations';
     protected $guarded = ['id', 'created_at', 'updated_at'];
@@ -66,12 +64,12 @@ class Translation extends BaseModel
     /**
      * Undocumented function.
      */
-    public function scopeOfTranslatedGroup(Builder $query, string $group): Builder
+    public function scopeOfTranslatedGroup(EloquentBuilder $query, string $group): QueryBuilder
     {
         return $query->where('group', $group)->whereNotNull('value');
     }
 
-    public function scopeOrderByGroupKeys(Builder $query, bool $ordered): Builder
+    public function scopeOrderByGroupKeys(EloquentBuilder $query, bool $ordered): EloquentBuilder
     {
         if ($ordered) {
             $query->orderBy('group')->orderBy('key');
@@ -80,7 +78,7 @@ class Translation extends BaseModel
         return $query;
     }
 
-    public function scopeSelectDistinctGroup(Builder $query): Builder
+    public function scopeSelectDistinctGroup(EloquentBuilder $query): QueryBuilder
     {
         $select = match (\DB::getDriverName()) {
             'mysql' => 'DISTINCT `group`',

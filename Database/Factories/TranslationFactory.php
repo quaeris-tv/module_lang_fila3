@@ -5,14 +5,18 @@ declare(strict_types=1);
 namespace Modules\Lang\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Lang\Models\Translation;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Modules\Lang\Models\Translation>
+ */
 class TranslationFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<\Illuminate\Database\Eloquent\Model>
+     * @var class-string<Translation>
      */
     protected $model = Translation::class;
 
@@ -24,14 +28,14 @@ class TranslationFactory extends Factory
     public function definition()
     {
         return [
-            'id' => $this->faker->randomNumber(5),
-            'lang' => $this->faker->word,
-            'value' => $this->faker->text,
-            'created_at' => $this->faker->dateTime,
-            'updated_at' => $this->faker->dateTime,
-            'namespace' => $this->faker->word,
-            'group' => $this->faker->word,
-            'item' => $this->faker->word,
+            'id' => fake()->randomNumber(5),
+            'lang' => fake()->word,
+            'value' => fake()->text,
+            'created_at' => fake()->dateTime,
+            'updated_at' => fake()->dateTime,
+            'namespace' => fake()->word,
+            'group' => fake()->word,
+            'item' => fake()->word,
         ];
     }
 }

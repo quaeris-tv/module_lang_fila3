@@ -33,9 +33,13 @@ abstract class BaseModel extends Model
      */
     public static $snakeAttributes = true;
 
-    /**
-     * @var int
-     */
+    /** @var bool */
+    public $incrementing = true;
+
+    /** @var bool */
+    public $timestamps = true;
+
+    /** @var int  */
     protected $perPage = 30;
 
     /** @var string */
@@ -44,22 +48,13 @@ abstract class BaseModel extends Model
     /** @var list<string> */
     protected $fillable = ['id'];
 
-    /** @var array<string, string> */
-    protected $casts = ['published_at' => 'datetime', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
-
     /** @var string */
     protected $primaryKey = 'id';
-
-    /** @var bool */
-    public $incrementing = true;
 
     /** @var list<string> */
     protected $hidden = [
         // 'password'
     ];
-
-    /** @var bool */
-    public $timestamps = true;
 
     /**
      * Create a new factory instance for the model.
@@ -69,5 +64,11 @@ abstract class BaseModel extends Model
     protected static function newFactory()
     {
         return app(GetFactoryAction::class)->execute(static::class);
+    }
+    /**
+     * @return array<string, string> */
+    protected function casts(): array
+    {
+        return ['published_at' => 'datetime', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
     }
 }
