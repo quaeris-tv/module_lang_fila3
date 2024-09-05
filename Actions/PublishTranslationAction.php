@@ -39,7 +39,7 @@ class PublishTranslationAction
         $data = $translationData->getData();
         $data_up = $data;
         Arr::set($data_up, $translationData->item, $translationData->value);
-        if ($data != $data_up) {
+        if ($data !== $data_up) {
             app(SaveArrayAction::class)->execute(data: $data_up, filename: $filename);
         }
     }

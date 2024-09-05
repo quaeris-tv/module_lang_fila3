@@ -15,11 +15,11 @@ use Webmozart\Assert\Assert;
  */
 class LangServiceProvider extends XotBaseServiceProvider
 {
+    public string $module_name = 'lang';
+
     protected string $module_dir = __DIR__;
 
     protected string $module_ns = __NAMESPACE__;
-
-    public string $module_name = 'lang';
 
     public function bootCallback(): void
     {

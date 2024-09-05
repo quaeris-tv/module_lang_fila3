@@ -32,8 +32,7 @@ class GetTransPathAction
             $module_path = Str::of($module_path)->beforeLast('/')->toString();
         }
         $lang = app()->getLocale();
-        $file = $module_path.'/Resources/lang/'.$lang.'/'.$piece[0].'.php';
 
-        return $file;
+        return $module_path.'/Resources/lang/'.$lang.'/'.$piece[0].'.php';
     }
 }
