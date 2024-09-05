@@ -4,12 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Providers;
 
-use Exception;
 use Modules\Xot\Providers\XotBaseRouteServiceProvider;
-
-use function getRouteParameters;
-use function in_array;
-use function is_array;
 
 class RouteServiceProvider extends XotBaseRouteServiceProvider
 {
@@ -35,23 +30,23 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
     public function registerLang(): void
     {
         $locales = config('laravellocalization.supportedLocales');
-        if (! is_array($locales)) {
+        if (! \is_array($locales)) {
             $locales = ['it' => 'it', 'en' => 'en'];
         }
         $langs = array_keys($locales);
 
-        if (! is_array($langs)) {
-            throw new Exception('[.__LINE__.]['.class_basename(self::class).']');
+        if (! \is_array($langs)) {
+            throw new \Exception('[.__LINE__.]['.class_basename(self::class).']');
         }
-        getRouteParameters();
+        \getRouteParameters();
         $n = 1;
         if (inAdmin()) {
             $n = 3;
         }
 
-        if (in_array(request()->segment($n), $langs, false)) {
+        if (\in_array(request()->segment($n), $langs, false)) {
             $lang = request()->segment($n);
-            if ($lang !== null) {
+            if (null !== $lang) {
                 app()->setLocale($lang);
             }
         }
