@@ -39,7 +39,7 @@ abstract class BaseModel extends Model
     /** @var bool */
     public $timestamps = true;
 
-    /** @var int  */
+    /** @var int */
     protected $perPage = 30;
 
     /** @var string */
@@ -65,6 +65,7 @@ abstract class BaseModel extends Model
     {
         return app(GetFactoryAction::class)->execute(static::class);
     }
+
     /**
      * @return array<string, string> */
     protected function casts(): array
