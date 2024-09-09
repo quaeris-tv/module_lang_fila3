@@ -152,6 +152,8 @@ class Post extends Model
 
     /** @var string */
     protected $primaryKey = 'id';
+/** @var string */
+    protected $keyType = 'string';
 
     /*
     public function getRouteKeyName() {
@@ -268,6 +270,8 @@ class Post extends Model
     protected function casts(): array
     {
         return [
+                'id'=>'string',
+                'uuid'=>'string',
             'image_resize_src' => 'array',
             'url_lang' => 'array',
             'created_at' => 'datetime',
