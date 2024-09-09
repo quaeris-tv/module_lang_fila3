@@ -67,7 +67,7 @@ class Translation extends BaseModel
     /**
      * Undocumented function.
      */
-    public function scopeOfTranslatedGroup(EloquentBuilder $query, string $group): QueryBuilder
+    public function scopeOfTranslatedGroup(EloquentBuilder $query, string $group): QueryBuilder|EloquentBuilder
     {
         return $query->where('group', $group)->whereNotNull('value');
     }
@@ -81,7 +81,7 @@ class Translation extends BaseModel
         return $query;
     }
 
-    public function scopeSelectDistinctGroup(EloquentBuilder $query): QueryBuilder
+    public function scopeSelectDistinctGroup(EloquentBuilder $query): EloquentBuilder|QueryBuilder
     {
         $select = match (\DB::getDriverName()) {
             'mysql' => 'DISTINCT `group`',

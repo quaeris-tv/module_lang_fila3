@@ -52,6 +52,8 @@ abstract class BaseModelLang extends Model
 
     /** @var string */
     protected $primaryKey = 'id';
+/** @var string */
+    protected $keyType = 'string';
 
     /** @var list<string> */
     protected $hidden = [
@@ -78,6 +80,8 @@ abstract class BaseModelLang extends Model
      * @return array<string, string> */
     protected function casts(): array
     {
-        return ['published_at' => 'datetime', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
+        return [
+                'id'=>'string',
+                'uuid'=>'string','published_at' => 'datetime', 'created_at' => 'datetime', 'updated_at' => 'datetime'];
     }
 }
