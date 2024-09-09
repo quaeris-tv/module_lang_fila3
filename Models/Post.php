@@ -152,7 +152,7 @@ class Post extends Model
 
     /** @var string */
     protected $primaryKey = 'id';
-/** @var string */
+    /** @var string */
     protected $keyType = 'string';
 
     /*
@@ -270,8 +270,8 @@ class Post extends Model
     protected function casts(): array
     {
         return [
-                'id'=>'string',
-                'uuid'=>'string',
+            'id' => 'string',
+            'uuid' => 'string',
             'image_resize_src' => 'array',
             'url_lang' => 'array',
             'created_at' => 'datetime',
