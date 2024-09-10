@@ -24,7 +24,7 @@ class ThemeComposer
         app()->getLocale();
         $langs = config('laravellocalization.supportedLocales');
         if (! is_array($langs)) {
-            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+            throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
         $langs = collect($langs)->map(
             function (array $item, $k): array {
@@ -71,7 +71,7 @@ class ThemeComposer
         return $this->languages()
             ->filter(function ($item) use ($curr): bool {
                 if (! $item instanceof LangData) {
-                    throw new \Exception('['.__LINE__.']['.__FILE__.']');
+                    throw new \Exception('['.__LINE__.']['.class_basename($this).']');
                 }
 
                 return $item->id !== $curr;
@@ -84,7 +84,7 @@ class ThemeComposer
         $lang = $this->languages()->first(
             function ($item) use ($curr): bool {
                 if (! $item instanceof LangData) {
-                    throw new \Exception('['.__LINE__.']['.__FILE__.']');
+                    throw new \Exception('['.__LINE__.']['.class_basename($this).']');
                 }
 
                 return $item->id === $curr;
