@@ -25,7 +25,7 @@ class PublishTranslationAction
         $hints=app('translator')->getLoader()->namespaces();
         $path=collect($hints)->get($row->namespace);
         if($path==null){
-            throw new Exception('['.__LINE__.']['.__FILE__.']');
+            throw new Exception('['.__LINE__.']['.class_basename($this).']');
         }
         $filename=FileService::fixPath($path.'/'.$row->lang.'/'.$row->group.'.php');
         */

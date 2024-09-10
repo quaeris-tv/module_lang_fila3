@@ -27,7 +27,7 @@ class TranslationData extends Data
         $hints = app('translator')->getLoader()->namespaces();
         $path = collect($hints)->get($this->namespace);
         if (null === $path) {
-            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+            throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
 
         return FileService::fixPath($path.'/'.$this->lang.'/'.$this->group.'.php');
@@ -41,7 +41,7 @@ class TranslationData extends Data
             $data = File::getRequire($filename);
         }
         if (! is_array($data)) {
-            throw new \Exception('['.__LINE__.']['.__FILE__.']');
+            throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
 
         return $data;
