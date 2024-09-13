@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Modules\Lang\Datas;
 
 use Illuminate\Support\Facades\File;
-use Modules\Xot\Services\FileService;
 use Spatie\LaravelData\Data;
 
 class TranslationData extends Data
@@ -30,7 +29,7 @@ class TranslationData extends Data
             throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
 
-        return FileService::fixPath($path.'/'.$this->lang.'/'.$this->group.'.php');
+        return app(\Modules\Xot\Actions\File\FixPathAction::class)->execute($path.'/'.$this->lang.'/'.$this->group.'.php');
     }
 
     public function getData(): array

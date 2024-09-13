@@ -9,7 +9,6 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Modules\Lang\Datas\TranslationData;
 use Modules\Xot\Actions\Array\SaveArrayAction;
-use Modules\Xot\Services\FileService;
 use Spatie\QueueableAction\QueueableAction;
 
 class PublishTranslationAction
@@ -27,7 +26,7 @@ class PublishTranslationAction
         if($path==null){
             throw new Exception('['.__LINE__.']['.class_basename($this).']');
         }
-        $filename=FileService::fixPath($path.'/'.$row->lang.'/'.$row->group.'.php');
+        $filename=app(\Modules\Xot\Actions\File\FixPathAction::class)->execute($path.'/'.$row->lang.'/'.$row->group.'.php');
         */
         $filename = $translationData->getFilename();
         /*
