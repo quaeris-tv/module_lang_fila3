@@ -29,7 +29,7 @@ class ThemeComposer
         $langs = collect($langs)->map(
             function (array $item, $k): array {
                 $reg = collect(explode('_', (string) $item['regional']))->first();
-                if ('en' === $reg) {
+                if ($reg === 'en') {
                     $reg = 'gb';
                 }
                 $url = '#'; // devo fare ancora front
