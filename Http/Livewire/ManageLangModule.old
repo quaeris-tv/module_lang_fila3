@@ -37,7 +37,7 @@ class ManageLangModule extends Component
         $lang = app()->getLocale();
         $path = Module::getModulePath($this->module_name);
         $path .= 'Resources\lang\\'.$lang.'';
-        $path = FileService::fixPath($path);
+        $path = app(\Modules\Xot\Actions\File\FixPathAction::class)->execute($path);
         $this->path = $path;
     }
 
