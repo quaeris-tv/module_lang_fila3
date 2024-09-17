@@ -20,6 +20,9 @@ class SaveTransAction
     {
         $filename = app(GetTransPathAction::class)->execute($key);
         $cont = File::getRequire($filename);
+        if (! is_array($cont)) {
+            $cont = [];
+        }
         $piece = implode('.', array_slice(explode('.', $key), 1));
         if ('' !== $piece) {
             Arr::set($cont, $piece, $data);
