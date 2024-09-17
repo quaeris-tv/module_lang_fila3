@@ -30,6 +30,10 @@ class SaveTransAction
             $cont = $data;
         }
 
+        if (! is_array($cont)) {
+            throw new \Exception('Error in SaveTransAction');
+        }
+
         app(SaveArrayAction::class)->execute(data: $cont, filename: $filename);
     }
 }
