@@ -9,89 +9,105 @@ use Illuminate\Support\Facades\Route;
 use Modules\Lang\Datas\LangData;
 use Spatie\LaravelData\DataCollection;
 
-/**
- * --.
- */
 class ThemeComposer
 {
     /**
-     * Undocumented function.
+     * Get all supported languages as a DataCollection.
+     *
+     * @throws \Exception if supportedLocales config is not an array
      *
      * @return DataCollection<LangData>
      */
     public function languages(): DataCollection
     {
-        app()->getLocale();
         $langs = config('laravellocalization.supportedLocales');
+
         if (! is_array($langs)) {
-            throw new \Exception('['.__LINE__.']['.class_basename($this).']');
+            throw new \Exception(sprintf('Invalid config for supportedLocales on line %d in %s', __LINE__, class_basename($this)));
         }
-        $langs = collect($langs)->map(
-            /* @phpstan-ignore-line */
-            function (array $item, $k): array {
-                $reg = collect(explode('_', (string) $item['regional']))->first();
-                if ('en' === $reg) {
-                    $reg = 'gb';
-                }
-                $url = '#'; // devo fare ancora front
-                if (inAdmin()) {
-                    $route_name = (string) Route::currentRouteName();
-                    $route_parameters = getRouteParameters();
-                    $data = request()->all();
-                    $route_parameters['lang'] = $k;
-                    $url = route($route_name, $route_parameters);
-                    $url = Request::create($url)->fullUrlWithQuery($data);
-                }
 
-                return [
-                    'id' => $k,
-                    'name' => $item['name'],
-                    'flag' => '<div class="iti__flag-box"><div class="iti__flag iti__'.$reg.'"></div></div>',
-                    'url' => $url,
-                ];
+        $languages = collect($langs)->map(function (mixed $item, string $locale): array {
+            // Ensure $item is an array as expected, otherwise handle error.
+            if (! is_array($item) || ! isset($item['regional'], $item['name'])) {
+                throw new \InvalidArgumentException(sprintf('Expected array with "regional" and "name" keys at locale %s', $locale));
             }
-        );
 
-        /**
-         * @var DataCollection<LangData>
-         */
-        $res = LangData::collect($langs->all(), DataCollection::class);
+            // Extract regional code and handle 'en' to 'gb' mapping.
+            $regionalCode = explode('_', (string) $item['regional'])[0] ?? 'en';
+            if ('en' === $regionalCode) {
+                $regionalCode = 'gb';
+            }
 
-        return $res;
+            $url = '#'; // Placeholder URL for frontend.
+            if (inAdmin()) {
+                $url = $this->buildAdminLanguageUrl($locale);
+            }
+
+            return [
+                'id' => $locale,
+                'name' => $item['name'],
+                'flag' => $this->buildFlagHtml($regionalCode),
+                'url' => $url,
+            ];
+        });
+
+        return LangData::collection($languages->all());
     }
 
     /**
-     * Undocumented function.
+     * Get all languages except the current one.
      *
-     *  * @return DataCollection<LangData>
+     * @return DataCollection<LangData>
      */
     public function otherLanguages(): DataCollection
     {
-        $curr = app()->getLocale();
+        $currentLocale = app()->getLocale();
 
-        return $this->languages()
-            ->filter(function ($item) use ($curr): bool {
-                if (! $item instanceof LangData) {
-                    throw new \Exception('['.__LINE__.']['.class_basename($this).']');
-                }
-
-                return $item->id !== $curr;
-            });
+        return $this->languages()->filter(function (LangData $language) use ($currentLocale): bool {
+            return $language->id !== $currentLocale;
+        });
     }
 
+    /**
+     * Get a specific field of the current language.
+     *
+     * @throws \Exception if the current language is not found
+     */
     public function currentLang(string $field): string
     {
-        $curr = app()->getLocale();
-        $lang = $this->languages()->first(
-            function ($item) use ($curr): bool {
-                if (! $item instanceof LangData) {
-                    throw new \Exception('['.__LINE__.']['.class_basename($this).']');
-                }
+        $currentLocale = app()->getLocale();
 
-                return $item->id === $curr;
-            }
+        $currentLang = $this->languages()->firstWhere('id', $currentLocale);
+
+        if (! $currentLang instanceof LangData) {
+            throw new \Exception(sprintf('Current language not found on line %d in %s', __LINE__, class_basename($this)));
+        }
+
+        return (string) $currentLang->{$field};
+    }
+
+    /**
+     * Build the URL for the admin panel based on the current route and parameters.
+     */
+    private function buildAdminLanguageUrl(string $locale): string
+    {
+        $routeName = Route::currentRouteName();
+        $routeParameters = array_merge(getRouteParameters(), ['lang' => $locale]);
+        $queryParameters = request()->all();
+
+        $url = route($routeName, $routeParameters);
+
+        return Request::create($url)->fullUrlWithQuery($queryParameters);
+    }
+
+    /**
+     * Build the HTML for the language flag.
+     */
+    private function buildFlagHtml(string $regionalCode): string
+    {
+        return sprintf(
+            '<div class="iti__flag-box"><div class="iti__flag iti__%s"></div></div>',
+            e($regionalCode)
         );
-
-        return (string) $lang->{$field};
     }
 }
