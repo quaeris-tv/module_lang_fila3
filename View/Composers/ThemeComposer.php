@@ -63,9 +63,16 @@ class ThemeComposer
     {
         $currentLocale = app()->getLocale();
 
-        return $this->languages()->filter(function (LangData $language) use ($currentLocale): bool {
-            return $language->id !== $currentLocale;
-        });
+        return $this->languages()
+            ->filter(function (mixed $item) use ($currentLocale): bool {
+                // Ensure the item is an instance of LangData
+                if (! $item instanceof LangData) {
+                    throw new \Exception(sprintf('Expected instance of LangData, got %s on line %d in %s', is_object($item) ? get_class($item) : gettype($item), __LINE__, class_basename($this)));
+                }
+
+                // Filter out the current locale
+                return $item->id !== $currentLocale;
+            });
     }
 
     /**
@@ -77,13 +84,16 @@ class ThemeComposer
     {
         $currentLocale = app()->getLocale();
 
-        $currentLang = $this->languages()->firstWhere('id', $currentLocale);
+        // Convert DataCollection to a Laravel Collection to use firstWhere()
+        $lang = $this->languages()
+            ->toCollection()
+            ->firstWhere('id', $currentLocale);
 
-        if (! $currentLang instanceof LangData) {
+        if (! $lang instanceof LangData) {
             throw new \Exception(sprintf('Current language not found on line %d in %s', __LINE__, class_basename($this)));
         }
 
-        return (string) $currentLang->{$field};
+        return (string) $lang->{$field};
     }
 
     /**
@@ -92,6 +102,9 @@ class ThemeComposer
     private function buildAdminLanguageUrl(string $locale): string
     {
         $routeName = Route::currentRouteName();
+        if (! is_string($routeName)) {
+            return '#';
+        }
         $routeParameters = array_merge(getRouteParameters(), ['lang' => $locale]);
         $queryParameters = request()->all();
 
