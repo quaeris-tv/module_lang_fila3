@@ -27,6 +27,7 @@ class ThemeComposer
             throw new \Exception('['.__LINE__.']['.class_basename($this).']');
         }
         $langs = collect($langs)->map(
+            /* @phpstan-ignore-line */
             function (array $item, $k): array {
                 $reg = collect(explode('_', (string) $item['regional']))->first();
                 if ('en' === $reg) {
