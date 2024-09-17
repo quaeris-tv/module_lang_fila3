@@ -35,10 +35,12 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
         }
         $langs = array_keys($locales);
 
+        /*
         if (! \is_array($langs)) {
             throw new \Exception('[.__LINE__.]['.class_basename(self::class).']');
         }
         \getRouteParameters();
+        */
         $n = 1;
         if (inAdmin()) {
             $n = 3;
