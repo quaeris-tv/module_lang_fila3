@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace Modules\Lang\View\Composers;
 
-use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use InvalidArgumentException;
 use Modules\Lang\Datas\LangData;
 use Spatie\LaravelData\DataCollection;
 
@@ -16,27 +14,27 @@ class ThemeComposer
     /**
      * Get all supported languages as a DataCollection.
      *
-     * @return DataCollection<LangData>
+     * @throws \Exception if supportedLocales config is not an array
      *
-     * @throws Exception if supportedLocales config is not an array
+     * @return DataCollection<LangData>
      */
     public function languages(): DataCollection
     {
         $langs = config('laravellocalization.supportedLocales');
 
         if (! is_array($langs)) {
-            throw new Exception(sprintf('Invalid config for supportedLocales on line %d in %s', __LINE__, class_basename($this)));
+            throw new \Exception(sprintf('Invalid config for supportedLocales on line %d in %s', __LINE__, class_basename($this)));
         }
 
         $languages = collect($langs)->map(function (mixed $item, string $locale): array {
             // Ensure $item is an array as expected, otherwise handle error.
             if (! is_array($item) || ! isset($item['regional'], $item['name'])) {
-                throw new InvalidArgumentException(sprintf('Expected array with "regional" and "name" keys at locale %s', $locale));
+                throw new \InvalidArgumentException(sprintf('Expected array with "regional" and "name" keys at locale %s', $locale));
             }
 
             // Extract regional code and handle 'en' to 'gb' mapping.
             $regionalCode = explode('_', (string) $item['regional'])[0] ?? 'en';
-            if ($regionalCode === 'en') {
+            if ('en' === $regionalCode) {
                 $regionalCode = 'gb';
             }
 
@@ -69,7 +67,7 @@ class ThemeComposer
             ->filter(function (mixed $item) use ($currentLocale): bool {
                 // Ensure the item is an instance of LangData
                 if (! $item instanceof LangData) {
-                    throw new Exception(sprintf('Expected instance of LangData, got %s on line %d in %s', is_object($item) ? get_class($item) : gettype($item), __LINE__, class_basename($this)));
+                    throw new \Exception(sprintf('Expected instance of LangData, got %s on line %d in %s', is_object($item) ? get_class($item) : gettype($item), __LINE__, class_basename($this)));
                 }
 
                 // Filter out the current locale
@@ -80,7 +78,7 @@ class ThemeComposer
     /**
      * Get a specific field of the current language.
      *
-     * @throws Exception if the current language is not found
+     * @throws \Exception if the current language is not found
      */
     public function currentLang(string $field): string
     {
@@ -92,7 +90,7 @@ class ThemeComposer
             ->firstWhere('id', $currentLocale);
 
         if (! $lang instanceof LangData) {
-            throw new Exception(sprintf('Current language not found on line %d in %s', __LINE__, class_basename($this)));
+            throw new \Exception(sprintf('Current language not found on line %d in %s', __LINE__, class_basename($this)));
         }
 
         return (string) $lang->{$field};
