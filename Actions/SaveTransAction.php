@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Actions;
 
-use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Modules\Xot\Actions\Array\SaveArrayAction;
@@ -25,14 +24,14 @@ class SaveTransAction
             $cont = [];
         }
         $piece = implode('.', array_slice(explode('.', $key), 1));
-        if ($piece !== '') {
+        if ('' !== $piece) {
             Arr::set($cont, $piece, $data);
         } else {
             $cont = $data;
         }
 
         if (! is_array($cont)) {
-            throw new Exception('Error in SaveTransAction');
+            throw new \Exception('Error in SaveTransAction');
         }
 
         app(SaveArrayAction::class)->execute(data: $cont, filename: $filename);
