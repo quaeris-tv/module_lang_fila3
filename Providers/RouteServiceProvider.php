@@ -6,6 +6,9 @@ namespace Modules\Lang\Providers;
 
 use Modules\Xot\Providers\XotBaseRouteServiceProvider;
 
+use function in_array;
+use function is_array;
+
 class RouteServiceProvider extends XotBaseRouteServiceProvider
 {
     /**
@@ -30,7 +33,7 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
     public function registerLang(): void
     {
         $locales = config('laravellocalization.supportedLocales');
-        if (! \is_array($locales)) {
+        if (! is_array($locales)) {
             $locales = ['it' => 'it', 'en' => 'en'];
         }
         $langs = array_keys($locales);
@@ -46,9 +49,9 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
             $n = 3;
         }
 
-        if (\in_array(request()->segment($n), $langs, false)) {
+        if (in_array(request()->segment($n), $langs, false)) {
             $lang = request()->segment($n);
-            if (null !== $lang) {
+            if ($lang !== null) {
                 app()->setLocale($lang);
             }
         }
