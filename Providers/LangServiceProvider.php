@@ -21,14 +21,16 @@ class LangServiceProvider extends XotBaseServiceProvider
 
     protected string $module_ns = __NAMESPACE__;
 
-    public function bootCallback(): void
+    public function boot(): void
     {
+        parent::boot();
         // BladeService::registerComponents($this->module_dir.'/../View/Components', 'Modules\\Lang');
         $this->registerTranslator();
     }
 
-    public function registerCallback(): void
+    public function register(): void
     {
+        parent::register();
         // --dalla doc in register ... ma non funziona, funziona in boot
         // $this->registerTranslator();
     }
