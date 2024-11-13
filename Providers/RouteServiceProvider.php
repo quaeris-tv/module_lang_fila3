@@ -17,13 +17,15 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
 
     protected string $module_ns = __NAMESPACE__;
 
-    public function bootCallback(): void
+    public function boot(): void
     {
+        parent::boot();
         $this->registerLang();
     }
 
-    public function registerCallback(): void
+    public function register(): void
     {
+        parent::register();
         // $this->registerLang();
     }
 
