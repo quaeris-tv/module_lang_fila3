@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @see https://github.com/laravel/framework/discussions/49574
  */
@@ -23,11 +24,8 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 class Change extends Component
 {
     public string $lang;
-
     public array $langs;
-
     public string $url;
-
     public function mount(): void
     {
         $this->lang = app()->getLocale();
@@ -35,12 +33,12 @@ class Change extends Component
         unset($langs[$this->lang]);
         $this->url = Request::getRequestUri();
         $langs = Arr::map($langs, function (array $item, $key) {
+
             $url = LaravelLocalization::getLocalizedURL($key, $this->url, [], true);
             if (false !== $url) {
                 $url = Str::of($url)->replace(url(''), '')->toString();
             }
             $item['url'] = $url;
-
             return $item;
         });
         $this->langs = $langs;
@@ -59,7 +57,7 @@ class Change extends Component
         $view_params = [
             'view' => $view,
         ];
-        // if ([] === $this->teams) {
+// if ([] === $this->teams) {
         //    $view = 'ui::livewire.empty';
         // }
 
