@@ -33,6 +33,6 @@ class GetTransPathAction
         }
         $lang = app()->getLocale();
 
-        return $module_path . '/Resources/lang/' . $lang . '/' . $piece[0] . '.php';
+        return $module_path.'/Resources/lang/'.$lang.'/'.$piece[0].'.php';
     }
 }

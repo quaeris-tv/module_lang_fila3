@@ -219,9 +219,9 @@ class Post extends Model
         }
 
         if (! empty($this->attributes['post_type'])) {
-            $value = $this->attributes['post_type'] . ' ' . $this->attributes['post_id'];
+            $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
         } else {
-            $value = $this->post_type . ' ' . $this->post_id;
+            $value = $this->post_type.' '.$this->post_id;
         }
 
         $this->title = $value;
@@ -241,10 +241,10 @@ class Post extends Model
         }
         $value = $this->title;
         if ('' === $value) {
-            $value = $this->attributes['post_type'] . ' ' . $this->attributes['post_id'];
+            $value = $this->attributes['post_type'].' '.$this->attributes['post_id'];
         }
         if (null === $value) {
-            $value = 'u-' . random_int(1, 1000);
+            $value = 'u-'.random_int(1, 1000);
         }
         $value = Str::slug($value);
         $this->guid = $value;
