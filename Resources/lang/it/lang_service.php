@@ -90,5 +90,9 @@
     array (
       'label' => 'cancel',
     ),
+    'authenticate' => 
+    array (
+      'label' => 'authenticate',
+    ),
   ),
 );
