@@ -48,5 +48,47 @@
     array (
       'label' => 'parent_id',
     ),
+    'technician_name' => 
+    array (
+      'label' => 'technician_name',
+    ),
+    'serial_number' => 
+    array (
+      'label' => 'serial_number',
+    ),
+    'brand' => 
+    array (
+      'label' => 'brand',
+    ),
+    'model' => 
+    array (
+      'label' => 'model',
+    ),
+    'area' => 
+    array (
+      'name' => 
+      array (
+        'label' => 'area.name',
+      ),
+    ),
+    'save' => 
+    array (
+      'label' => 'save',
+    ),
+    'cancel' => 
+    array (
+      'label' => 'cancel',
+    ),
+  ),
+  'actions' => 
+  array (
+    'save' => 
+    array (
+      'label' => 'save',
+    ),
+    'cancel' => 
+    array (
+      'label' => 'cancel',
+    ),
   ),
 );
