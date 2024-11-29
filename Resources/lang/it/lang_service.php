@@ -94,5 +94,9 @@
     array (
       'label' => 'authenticate',
     ),
+    'downloadExample' => 
+    array (
+      'label' => 'downloadExample',
+    ),
   ),
 );

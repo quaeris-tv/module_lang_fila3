@@ -13,6 +13,7 @@ use Filament\Support\Components\Component;
 use Filament\Support\Concerns\Configurable;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Filters\BaseFilter;
+use Filament\Widgets\StatsOverviewWidget\Stat;
 use Illuminate\Container\Container;
 use Illuminate\Support\Facades\View;
 use Modules\Lang\Actions\Filament\AutoLabelAction;
@@ -93,6 +94,15 @@ class LangServiceProvider extends XotBaseServiceProvider
             // ->translateLabel()
             return $component;
         });
+        // Method Filament\Widgets\StatsOverviewWidget\Stat::configureUsing does not exist.
+        /*
+        Stat::configureUsing(function (Stat $component) {
+            $component = app(AutoLabelAction::class)->execute($component);
+
+            // ->translateLabel()
+            return $component;
+        });
+        */
     }
 
     public function registerTranslator(): void
