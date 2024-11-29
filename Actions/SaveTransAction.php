@@ -22,10 +22,20 @@ class SaveTransAction
         if (! File::exists($filename)) {
             app(SaveArrayAction::class)->execute(data: [], filename: $filename);
         }
-        $cont = File::getRequire($filename);
+        try {
+            $cont = File::getRequire($filename);
+        } catch (\Exception $e) {
+            dddx([
+                'key' => $key,
+                'data' => $data,
+                'filename' => $filename,
+                'message' => $e->getMessage(),
+            ]);
+        }
         if (! is_array($cont)) {
             $cont = [];
         }
+
         $piece = implode('.', array_slice(explode('.', $key), 1));
         if ('' !== $piece) {
             Arr::set($cont, $piece, $data);
