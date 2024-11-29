@@ -19,7 +19,7 @@ class SaveTransAction
     public function execute(string $key, int|string|array|null $data): void
     {
         $filename = app(GetTransPathAction::class)->execute($key);
-        if(!File::exists($filename)){
+        if (! File::exists($filename)) {
             app(SaveArrayAction::class)->execute(data: [], filename: $filename);
         }
         try {
