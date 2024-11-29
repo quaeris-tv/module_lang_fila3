@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Providers;
 
+use Filament\Actions\Action;
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Wizard\Step;
@@ -81,6 +82,12 @@ class LangServiceProvider extends XotBaseServiceProvider
             return $component;
         });
         Step::configureUsing(function (Step $component) {
+            $component = app(AutoLabelAction::class)->execute($component);
+
+            // ->translateLabel()
+            return $component;
+        });
+        Action::configureUsing(function (Action $component) {
             $component = app(AutoLabelAction::class)->execute($component);
 
             // ->translateLabel()

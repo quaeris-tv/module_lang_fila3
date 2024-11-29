@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Lang\Actions\Filament;
 
+use Filament\Actions\Action;
 use Filament\Forms\Components\Wizard\Step;
 use Illuminate\Support\Arr;
 use Modules\Lang\Actions\SaveTransAction;
@@ -31,6 +32,10 @@ class AutoLabelAction
         } else {
             $val = $component->getName();
             $label_tkey = $trans_key.'.fields.'.$val.'';
+        }
+
+        if ($component instanceof Action) {
+            $label_tkey = $trans_key.'.actions.'.$val.'';
         }
 
         $label_key = $label_tkey.'.label';
