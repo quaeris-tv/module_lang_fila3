@@ -21,5 +21,32 @@
     array (
       'label' => 'value',
     ),
+    'email' => 
+    array (
+      'label' => 'email',
+    ),
+    'password' => 
+    array (
+      'label' => 'password',
+    ),
+    'remember' => 
+    array (
+      'label' => 'remember',
+    ),
+    'assetType' => 
+    array (
+      'name' => 
+      array (
+        'label' => 'assetType.name',
+      ),
+    ),
+    'description' => 
+    array (
+      'label' => 'description',
+    ),
+    'parent_id' => 
+    array (
+      'label' => 'parent_id',
+    ),
   ),
 );
