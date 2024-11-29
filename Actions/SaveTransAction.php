@@ -18,9 +18,10 @@ class SaveTransAction
      */
     public function execute(string $key, int|string|array|null $data): void
     {
+        $cont=[];
         $filename = app(GetTransPathAction::class)->execute($key);
         if (! File::exists($filename)) {
-            app(SaveArrayAction::class)->execute(data: [], filename: $filename);
+            app(SaveArrayAction::class)->execute(data: $cont, filename: $filename);
         }
         try {
             $cont = File::getRequire($filename);
