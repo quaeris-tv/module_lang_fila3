@@ -1,25 +1,23 @@
-<?php return array (
-  'fields' => 
-  array (
-    'created_at' => 
-    array (
-      'fields' => 'created_at',
-      'label' => 
-      array (
-        'fields' => 'created_at',
-      ),
-    ),
-    'values' => 
-    array (
-      'fields' => 'values',
-      'label' => 
-      array (
-        'fields' => 'values',
-      ),
-    ),
-    'value' => 
-    array (
-      'label' => 'value',
-    ),
-  ),
-);
+<?php
+
+declare(strict_types=1);
+
+return [
+    'fields' => [
+        'created_at' => [
+            'fields' => 'created_at',
+            'label' => [
+                'fields' => 'created_at',
+            ],
+        ],
+        'values' => [
+            'fields' => 'values',
+            'label' => [
+                'fields' => 'values',
+            ],
+        ],
+        'value' => [
+            'label' => 'value',
+        ],
+    ],
+];
