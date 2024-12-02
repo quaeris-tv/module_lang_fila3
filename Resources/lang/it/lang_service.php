@@ -98,5 +98,13 @@
     array (
       'label' => 'downloadExample',
     ),
+    'create' => 
+    array (
+      'label' => 'create',
+    ),
+    'createAnother' => 
+    array (
+      'label' => 'createAnother',
+    ),
   ),
 );
