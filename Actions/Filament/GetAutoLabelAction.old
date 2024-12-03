@@ -12,7 +12,7 @@ use Modules\Xot\Actions\GetTransKeyAction;
 use Spatie\QueueableAction\QueueableAction;
 use Webmozart\Assert\Assert;
 
-class AutoLabelAction
+class GetAutoLabelAction
 {
     use QueueableAction;
 
@@ -20,7 +20,7 @@ class AutoLabelAction
      * Undocumented function.
      * return number of input added.
      */
-    public function execute($component)
+    public function execute($component): string
     {
         $backtrace = debug_backtrace();
         Assert::string($class = Arr::get($backtrace, '5.class'));
@@ -52,9 +52,10 @@ class AutoLabelAction
 
                 app(SaveTransAction::class)->execute($label_key, $label_value);
             }
-            $component->label($label);
+
+            return $label;
         }
 
-        return $component;
+        return $label_key;
     }
 }
