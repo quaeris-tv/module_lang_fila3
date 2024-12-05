@@ -62,6 +62,8 @@ class AutoLabelAction
             $component->label($label);
         }
 
+        $component->label('FIX:'.$label_key);
+
         return $component;
     }
 }
