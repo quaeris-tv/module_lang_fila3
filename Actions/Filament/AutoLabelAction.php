@@ -60,9 +60,9 @@ class AutoLabelAction
                 app(SaveTransAction::class)->execute($label_key, $label_value);
             }
             $component->label($label);
+        } else {
+            $component->label('FIX:'.$label_key);
         }
-
-        $component->label('FIX:'.$label_key);
 
         return $component;
     }
