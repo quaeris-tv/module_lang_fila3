@@ -34,7 +34,7 @@ return [
             ],
         ],
         'description' => [
-            'label' => 'description',
+            'label' => 'Descrizione',
         ],
         'parent_id' => [
             'label' => 'parent_id',
