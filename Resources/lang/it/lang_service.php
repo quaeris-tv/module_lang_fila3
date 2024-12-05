@@ -5,16 +5,10 @@ declare(strict_types=1);
 return [
     'fields' => [
         'created_at' => [
-            'fields' => 'created_at',
-            'label' => [
-                'fields' => 'created_at',
-            ],
+            'label' => 'created_at',
         ],
         'values' => [
-            'fields' => 'values',
-            'label' => [
-                'fields' => 'values',
-            ],
+            'label' => 'values',
         ],
         'value' => [
             'label' => 'value',

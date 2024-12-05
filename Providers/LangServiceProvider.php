@@ -83,7 +83,8 @@ class LangServiceProvider extends XotBaseServiceProvider
             $component = $component->wrapHeader()
                     ->verticallyAlignStart()
                     ->grow()
-                    ->wrap();
+                    // ->wrap()
+            ;
 
             return $component;
         });
