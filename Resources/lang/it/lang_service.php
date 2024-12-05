@@ -34,7 +34,7 @@ return [
             ],
         ],
         'description' => [
-            'label' => 'description',
+            'label' => 'Descrizione',
         ],
         'parent_id' => [
             'label' => 'parent_id',
@@ -67,6 +67,8 @@ return [
                 'label' => 'creator.name',
             ],
         ],
+        'file' => [
+            'label' => 'file',
         'isActive' => [
             'label' => 'isActive',
         ],
@@ -89,6 +91,12 @@ return [
         ],
         'createAnother' => [
             'label' => 'createAnother',
+        ],
+        'request' => [
+            'label' => 'request',
+        ],
+        'login' => [
+            'label' => 'login',
         ],
     ],
 ];
