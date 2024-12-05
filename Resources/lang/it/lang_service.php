@@ -69,6 +69,8 @@ return [
         ],
         'file' => [
             'label' => 'file',
+        'isActive' => [
+            'label' => 'isActive',
         ],
     ],
     'actions' => [
