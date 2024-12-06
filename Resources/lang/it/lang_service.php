@@ -1,228 +1,126 @@
-<<<<<<< HEAD
-<?php return array (
-  'fields' => 
+<?php
+return array (
+  'fields' =>
   array (
-    'created_at' => 
+    'created_at' =>
     array (
       'fields' => 'created_at',
-      'label' => 
+      'label' =>
       array (
         'fields' => 'created_at',
       ),
     ),
-    'values' => 
+    'values' =>
     array (
       'fields' => 'values',
-      'label' => 
+      'label' =>
       array (
         'fields' => 'values',
       ),
     ),
-    'value' => 
+    'value' =>
     array (
       'label' => 'value',
     ),
-    'email' => 
+    'email' =>
     array (
       'label' => 'email',
     ),
-    'password' => 
+    'password' =>
     array (
       'label' => 'password',
     ),
-    'remember' => 
+    'remember' =>
     array (
       'label' => 'remember',
     ),
-    'assetType' => 
+    'assetType' =>
     array (
-      'name' => 
+      'name' =>
       array (
         'label' => 'assetType.name',
       ),
     ),
-    'description' => 
+    'description' =>
     array (
       'label' => 'description',
     ),
-    'parent_id' => 
+    'parent_id' =>
     array (
       'label' => 'parent_id',
     ),
-    'technician_name' => 
+    'technician_name' =>
     array (
       'label' => 'technician_name',
     ),
-    'serial_number' => 
+    'serial_number' =>
     array (
       'label' => 'serial_number',
     ),
-    'brand' => 
+    'brand' =>
     array (
       'label' => 'brand',
     ),
-    'model' => 
+    'model' =>
     array (
       'label' => 'model',
     ),
-    'area' => 
+    'area' =>
     array (
-      'name' => 
+      'name' =>
       array (
         'label' => 'area.name',
       ),
     ),
-    'save' => 
+    'save' =>
     array (
       'label' => 'save',
     ),
-    'cancel' => 
+    'cancel' =>
     array (
       'label' => 'cancel',
     ),
-    'creator' => 
+    'creator' =>
     array (
-      'name' => 
+      'name' =>
       array (
         'label' => 'creator.name',
       ),
     ),
   ),
-  'actions' => 
+  'actions' =>
   array (
-    'save' => 
+    'save' =>
     array (
       'label' => 'save',
     ),
-    'cancel' => 
+    'cancel' =>
     array (
       'label' => 'cancel',
     ),
-    'authenticate' => 
+    'authenticate' =>
     array (
       'label' => 'authenticate',
     ),
-    'downloadExample' => 
+    'downloadExample' =>
     array (
       'label' => 'downloadExample',
     ),
-    'create' => 
+    'create' =>
     array (
       'label' => 'create',
     ),
-    'createAnother' => 
+    'createAnother' =>
     array (
       'label' => 'createAnother',
     ),
-    'login' => 
+    'login' =>
     array (
       'label' => 'login',
     ),
-    'request' => 
+    'request' =>
     array (
       'label' => 'request',
     ),
   ),
 );
-=======
-<?php
-
-declare(strict_types=1);
-
-return [
-    'fields' => [
-        'created_at' => [
-            'fields' => 'created_at',
-            'label' => [
-                'fields' => 'created_at',
-            ],
-        ],
-        'values' => [
-            'fields' => 'values',
-            'label' => [
-                'fields' => 'values',
-            ],
-        ],
-        'value' => [
-            'label' => 'value',
-        ],
-        'email' => [
-            'label' => 'email',
-        ],
-        'password' => [
-            'label' => 'password',
-        ],
-        'remember' => [
-            'label' => 'remember',
-        ],
-        'assetType' => [
-            'name' => [
-                'label' => 'assetType.name',
-            ],
-        ],
-        'description' => [
-            'label' => 'Descrizione',
-        ],
-        'parent_id' => [
-            'label' => 'parent_id',
-        ],
-        'technician_name' => [
-            'label' => 'technician_name',
-        ],
-        'serial_number' => [
-            'label' => 'serial_number',
-        ],
-        'brand' => [
-            'label' => 'Marca',
-        ],
-        'model' => [
-            'label' => 'Modello',
-        ],
-        'area' => [
-            'name' => [
-                'label' => 'area.name',
-            ],
-        ],
-        'save' => [
-            'label' => 'save',
-        ],
-        'cancel' => [
-            'label' => 'cancel',
-        ],
-        'creator' => [
-            'name' => [
-                'label' => 'creator.name',
-            ],
-        ],
-        'file' => [
-            'label' => 'file',
-        ],
-    ],
-    'actions' => [
-        'save' => [
-            'label' => 'save',
-        ],
-        'cancel' => [
-            'label' => 'cancel',
-        ],
-        'authenticate' => [
-            'label' => 'authenticate',
-        ],
-        'downloadExample' => [
-            'label' => 'downloadExample',
-        ],
-        'create' => [
-            'label' => 'create',
-        ],
-        'createAnother' => [
-            'label' => 'createAnother',
-        ],
-        'request' => [
-            'label' => 'request',
-        ],
-        'login' => [
-            'label' => 'login',
-        ],
-    ],
-];
->>>>>>> origin/v0.2.10
