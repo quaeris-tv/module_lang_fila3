@@ -46,10 +46,10 @@ return [
             'label' => 'serial_number',
         ],
         'brand' => [
-            'label' => 'brand',
+            'label' => 'Marca',
         ],
         'model' => [
-            'label' => 'model',
+            'label' => 'Modello',
         ],
         'area' => [
             'name' => [
