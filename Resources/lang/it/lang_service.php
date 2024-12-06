@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f7d9aa4c (Check & fix styling)
 <?php
 
 declare(strict_types=1);
@@ -35,7 +38,11 @@ return [
             ],
         ],
         'description' => [
+<<<<<<< HEAD
             'label' => 'Descrizione',
+=======
+            'label' => 'description',
+>>>>>>> f7d9aa4c (Check & fix styling)
         ],
         'parent_id' => [
             'label' => 'parent_id',
@@ -47,10 +54,17 @@ return [
             'label' => 'serial_number',
         ],
         'brand' => [
+<<<<<<< HEAD
             'label' => 'Marca',
         ],
         'model' => [
             'label' => 'Modello',
+=======
+            'label' => 'brand',
+        ],
+        'model' => [
+            'label' => 'model',
+>>>>>>> f7d9aa4c (Check & fix styling)
         ],
         'area' => [
             'name' => [
@@ -68,8 +82,13 @@ return [
                 'label' => 'creator.name',
             ],
         ],
+<<<<<<< HEAD
         'file' => [
             'label' => 'file',
+=======
+        'isActive' => [
+            'label' => 'isActive',
+>>>>>>> f7d9aa4c (Check & fix styling)
         ],
     ],
     'actions' => [
@@ -91,6 +110,7 @@ return [
         'createAnother' => [
             'label' => 'createAnother',
         ],
+<<<<<<< HEAD
         'request' => [
             'label' => 'request',
         ],
@@ -222,3 +242,7 @@ return [
   ),
 );
 >>>>>>> b9328780 (fix(lang_service.php): add isActive field and label to the existing fields and labels)
+=======
+    ],
+];
+>>>>>>> f7d9aa4c (Check & fix styling)
