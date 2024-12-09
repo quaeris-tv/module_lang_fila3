@@ -71,6 +71,10 @@ return [
         ],
         'email_verified_at' => [
             'label' => 'email_verified_at',
+        'file' => [
+            'label' => 'file',
+        'isActive' => [
+            'label' => 'isActive',
         ],
     ],
     'actions' => [
