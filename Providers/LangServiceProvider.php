@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Modules\Lang\Providers;
 
 use Filament\Actions\Action;
-use Filament\Tables\Actions\Action as TableAction;
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Wizard\Step;
 use Filament\Infolists\Components\Entry;
 use Filament\Support\Components\Component;
 use Filament\Support\Concerns\Configurable;
+use Filament\Tables\Actions\Action as TableAction;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Filters\BaseFilter;
 use Filament\Widgets\StatsOverviewWidget\Stat;
@@ -98,13 +98,15 @@ class LangServiceProvider extends XotBaseServiceProvider
         });
         Action::configureUsing(function (Action $component) {
             $component = app(AutoLabelAction::class)->execute($component);
-            //$component->iconButton();
+
+            // $component->iconButton();
             // ->translateLabel()
             return $component;
         });
         TableAction::configureUsing(function (TableAction $component) {
             $component = app(AutoLabelAction::class)->execute($component);
             $component->iconButton();
+
             // ->translateLabel()
             return $component;
         });
