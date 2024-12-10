@@ -67,14 +67,13 @@ return [
             'label' => 'Attivo',
         ],
         'password_expires_at' => [
-            'label' => 'password_expires_at',
+            'label' => 'Scadenza password',
         ],
         'email_verified_at' => [
-            'label' => 'email_verified_at',
+            'label' => 'Email verificata il',
+        ],
         'file' => [
-            'label' => 'file',
-        'isActive' => [
-            'label' => 'isActive',
+            'label' => 'File',
         ],
     ],
     'actions' => [
