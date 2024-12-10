@@ -1,180 +1,181 @@
-<?php return array (
-  'fields' => 
+<?php
+return array (
+  'fields' =>
   array (
-    'created_at' => 
+    'created_at' =>
     array (
       'fields' => 'created_at',
       'label' => 'Data di creazione',
     ),
-    'values' => 
+    'values' =>
     array (
       'fields' => 'values',
       'label' => 'Valori',
     ),
-    'value' => 
+    'value' =>
     array (
       'label' => 'Valore',
     ),
-    'email' => 
+    'email' =>
     array (
       'label' => 'Email',
     ),
-    'password' => 
+    'password' =>
     array (
       'label' => 'Password',
     ),
-    'remember' => 
+    'remember' =>
     array (
       'label' => 'Ricordami',
     ),
-    'assetType' => 
+    'assetType' =>
     array (
-      'name' => 
+      'name' =>
       array (
         'label' => 'Tipo di risorsa',
       ),
     ),
-    'description' => 
+    'description' =>
     array (
       'label' => 'Descrizione',
     ),
-    'parent_id' => 
+    'parent_id' =>
     array (
       'label' => 'ID genitore',
     ),
-    'technician_name' => 
+    'technician_name' =>
     array (
       'label' => 'Nome tecnico',
     ),
-    'serial_number' => 
+    'serial_number' =>
     array (
       'label' => 'Numero di serie',
     ),
-    'brand' => 
+    'brand' =>
     array (
       'label' => 'Marca',
     ),
-    'model' => 
+    'model' =>
     array (
       'label' => 'Modello',
     ),
-    'area' => 
+    'area' =>
     array (
-      'name' => 
+      'name' =>
       array (
         'label' => 'Area',
       ),
     ),
-    'save' => 
+    'save' =>
     array (
       'label' => 'Salva',
     ),
-    'cancel' => 
+    'cancel' =>
     array (
       'label' => 'Annulla',
     ),
-    'creator' => 
+    'creator' =>
     array (
-      'name' => 
+      'name' =>
       array (
         'label' => 'Creatore',
       ),
     ),
-    'isActive' => 
+    'isActive' =>
     array (
       'label' => 'Attivo',
     ),
-    'password_expires_at' => 
+    'password_expires_at' =>
     array (
       'label' => 'Scadenza password',
     ),
-    'email_verified_at' => 
+    'email_verified_at' =>
     array (
       'label' => 'Email verificata il',
     ),
-    'file' => 
+    'file' =>
     array (
       'label' => 'File',
     ),
-    'updated_at' => 
+    'updated_at' =>
     array (
       'label' => 'Ultima modifica',
     ),
-    'name' => 
+    'name' =>
     array (
       'label' => 'Nome',
     ),
-    'id' => 
+    'id' =>
     array (
       'label' => 'ID',
     ),
-    'roles' => 
+    'roles' =>
     array (
-      'name' => 
+      'name' =>
       array (
         'label' => 'roles.name',
       ),
     ),
-    'role' => 
+    'role' =>
     array (
-      'name' => 
+      'name' =>
       array (
         'label' => 'role.name',
       ),
     ),
-    'teams' => 
+    'teams' =>
     array (
-      'name' => 
+      'name' =>
       array (
         'label' => 'teams.name',
       ),
     ),
-    'applyFilters' => 
+    'applyFilters' =>
     array (
       'label' => 'applyFilters',
     ),
-    'toggleColumns' => 
+    'toggleColumns' =>
     array (
       'label' => 'toggleColumns',
     ),
-    'reorderRecords' => 
+    'reorderRecords' =>
     array (
       'label' => 'reorderRecords',
     ),
-    'resetFilters' => 
+    'resetFilters' =>
     array (
       'label' => 'resetFilters',
     ),
-    'openFilters' => 
+    'openFilters' =>
     array (
       'label' => 'openFilters',
     ),
   ),
-  'actions' => 
+  'actions' =>
   array (
-    'save' => 
+    'save' =>
     array (
       'label' => 'Salva',
     ),
-    'cancel' => 
+    'cancel' =>
     array (
       'label' => 'Annulla',
     ),
-    'authenticate' => 
+    'authenticate' =>
     array (
       'label' => 'Autentica',
     ),
-    'downloadExample' => 
+    'downloadExample' =>
     array (
       'label' => 'Scarica esempio',
     ),
-    'create' => 
+    'create' =>
     array (
       'label' => 'Crea',
     ),
-    'createAnother' => 
+    'createAnother' =>
     array (
       'label' => 'Crea un altro',
     ),
   ),
-);
+);
