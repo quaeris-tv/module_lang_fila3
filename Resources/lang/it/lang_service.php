@@ -5,11 +5,9 @@ declare(strict_types=1);
 return [
     'fields' => [
         'created_at' => [
-            'fields' => 'created_at',
             'label' => 'Data di creazione',
         ],
         'values' => [
-            'fields' => 'values',
             'label' => 'Valori',
         ],
         'value' => [
@@ -52,12 +50,6 @@ return [
                 'label' => 'Area',
             ],
         ],
-        'save' => [
-            'label' => 'Salva',
-        ],
-        'cancel' => [
-            'label' => 'Annulla',
-        ],
         'creator' => [
             'name' => [
                 'label' => 'Creatore',
@@ -86,30 +78,33 @@ return [
         ],
         'roles' => [
             'name' => [
-                'label' => 'roles.name',
+                'label' => 'Ruoli',
             ],
         ],
         'role' => [
             'name' => [
-                'label' => 'role.name',
+                'label' => 'Ruolo',
             ],
         ],
         'teams' => [
             'name' => [
-                'label' => 'teams.name',
+                'label' => 'Squadre',
             ],
         ],
-        'applyFilters' => [
-            'label' => 'applyFilters',
+        'geocomplete' => [
+            'label' => 'Completa geolocalizzazione',
         ],
-        'toggleColumns' => [
-            'label' => 'toggleColumns',
+        'radius' => [
+            'label' => 'Raggio',
         ],
-        'reorderRecords' => [
-            'label' => 'reorderRecords',
+        'unit' => [
+            'label' => 'Unità',
         ],
-        'resetFilters' => [
-            'label' => 'resetFilters',
+        'latitude' => [
+            'label' => 'Latitudine',
+        ],
+        'longitude' => [
+            'label' => 'Longitudine',
         ],
     ],
     'actions' => [
@@ -130,6 +125,18 @@ return [
         ],
         'createAnother' => [
             'label' => 'Crea un altro',
+        ],
+        'applyFilters' => [
+            'label' => 'Applica filtri',
+        ],
+        'resetFilters' => [
+            'label' => 'Reimposta filtri',
+        ],
+        'toggleColumns' => [
+            'label' => 'Cambia colonne',
+        ],
+        'reorderRecords' => [
+            'label' => 'Riordina record',
         ],
     ],
 ];
