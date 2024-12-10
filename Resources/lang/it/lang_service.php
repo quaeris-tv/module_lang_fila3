@@ -1,110 +1,3 @@
-<<<<<<< HEAD
-<?php
-
-declare(strict_types=1);
-
-return [
-    'fields' => [
-        'created_at' => [
-            'fields' => 'created_at',
-            'label' => 'Data di creazione',
-        ],
-        'values' => [
-            'fields' => 'values',
-            'label' => 'Valori',
-        ],
-        'value' => [
-            'label' => 'Valore',
-        ],
-        'email' => [
-            'label' => 'Email',
-        ],
-        'password' => [
-            'label' => 'Password',
-        ],
-        'remember' => [
-            'label' => 'Ricordami',
-        ],
-        'assetType' => [
-            'name' => [
-                'label' => 'Tipo di risorsa',
-            ],
-        ],
-        'description' => [
-            'label' => 'Descrizione',
-        ],
-        'parent_id' => [
-            'label' => 'ID genitore',
-        ],
-        'technician_name' => [
-            'label' => 'Nome tecnico',
-        ],
-        'serial_number' => [
-            'label' => 'Numero di serie',
-        ],
-        'brand' => [
-            'label' => 'Marca',
-        ],
-        'model' => [
-            'label' => 'Modello',
-        ],
-        'area' => [
-            'name' => [
-                'label' => 'Area',
-            ],
-        ],
-        'save' => [
-            'label' => 'Salva',
-        ],
-        'cancel' => [
-            'label' => 'Annulla',
-        ],
-        'creator' => [
-            'name' => [
-                'label' => 'Creatore',
-            ],
-        ],
-        'isActive' => [
-            'label' => 'Attivo',
-        ],
-        'password_expires_at' => [
-            'label' => 'Scadenza password',
-        ],
-        'email_verified_at' => [
-            'label' => 'Email verificata il',
-        ],
-        'file' => [
-            'label' => 'File',
-        ],
-        'updated_at' => [
-            'label' => 'updated_at',
-        ],
-        'name' => [
-            'label' => 'name',
-        ],
-    ],
-    'actions' => [
-        'save' => [
-            'label' => 'Salva',
-        ],
-        'cancel' => [
-            'label' => 'Annulla',
-        ],
-        'authenticate' => [
-            'label' => 'Autentica',
-        ],
-        'downloadExample' => [
-            'label' => 'Scarica esempio',
-        ],
-        'create' => [
-            'label' => 'Crea',
-        ],
-        'createAnother' => [
-            'label' => 'Crea un altro',
-        ],
-    ],
-];
-=======
 <?php return array (
   'fields' => 
   array (
@@ -205,15 +98,52 @@ return [
     ),
     'updated_at' => 
     array (
-      'label' => 'updated_at',
+      'label' => 'Ultima modifica',
     ),
     'name' => 
     array (
-      'label' => 'name',
+      'label' => 'Nome',
     ),
     'id' => 
     array (
-      'label' => 'id',
+      'label' => 'ID',
+    ),
+    'roles' => 
+    array (
+      'name' => 
+      array (
+        'label' => 'roles.name',
+      ),
+    ),
+    'role' => 
+    array (
+      'name' => 
+      array (
+        'label' => 'role.name',
+      ),
+    ),
+    'teams' => 
+    array (
+      'name' => 
+      array (
+        'label' => 'teams.name',
+      ),
+    ),
+    'applyFilters' => 
+    array (
+      'label' => 'applyFilters',
+    ),
+    'toggleColumns' => 
+    array (
+      'label' => 'toggleColumns',
+    ),
+    'reorderRecords' => 
+    array (
+      'label' => 'reorderRecords',
+    ),
+    'resetFilters' => 
+    array (
+      'label' => 'resetFilters',
     ),
   ),
   'actions' => 
@@ -243,5 +173,4 @@ return [
       'label' => 'Crea un altro',
     ),
   ),
-);
->>>>>>> 90d43f2 (up)
+);
