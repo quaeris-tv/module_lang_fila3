@@ -149,86 +149,95 @@ return [
     'fields' => [
         'created_at' => [
             'fields' => 'created_at',
-            'label' => [
-                'fields' => 'created_at',
-            ],
+            'label' => 'Data di creazione',
         ],
         'values' => [
             'fields' => 'values',
-            'label' => [
-                'fields' => 'values',
-            ],
+            'label' => 'Valori',
         ],
         'value' => [
-            'label' => 'value',
+            'label' => 'Valore',
         ],
         'email' => [
-            'label' => 'email',
+            'label' => 'Email',
         ],
         'password' => [
-            'label' => 'password',
+            'label' => 'Password',
         ],
         'remember' => [
-            'label' => 'remember',
+            'label' => 'Ricordami',
         ],
         'assetType' => [
             'name' => [
-                'label' => 'assetType.name',
+                'label' => 'Tipo di risorsa',
             ],
         ],
         'description' => [
-            'label' => 'description',
+            'label' => 'Descrizione',
         ],
         'parent_id' => [
-            'label' => 'parent_id',
+            'label' => 'ID genitore',
         ],
         'technician_name' => [
-            'label' => 'technician_name',
+            'label' => 'Nome tecnico',
         ],
         'serial_number' => [
-            'label' => 'serial_number',
+            'label' => 'Numero di serie',
         ],
         'brand' => [
-            'label' => 'brand',
+            'label' => 'Marca',
         ],
         'model' => [
-            'label' => 'model',
+            'label' => 'Modello',
         ],
         'area' => [
             'name' => [
-                'label' => 'area.name',
+                'label' => 'Area',
             ],
         ],
         'save' => [
-            'label' => 'save',
+            'label' => 'Salva',
         ],
         'cancel' => [
-            'label' => 'cancel',
+            'label' => 'Annulla',
         ],
         'creator' => [
             'name' => [
-                'label' => 'creator.name',
+                'label' => 'Creatore',
             ],
+        ],
+        'isActive' => [
+            'label' => 'Attivo',
+        ],
+        'password_expires_at' => [
+            'label' => 'password_expires_at',
+        ],
+        'email_verified_at' => [
+            'label' => 'email_verified_at',
+        'file' => [
+            'label' => 'file',
+        'isActive' => [
+            'label' => 'isActive',
         ],
     ],
     'actions' => [
         'save' => [
-            'label' => 'save',
+            'label' => 'Salva',
         ],
         'cancel' => [
-            'label' => 'cancel',
+            'label' => 'Annulla',
         ],
         'authenticate' => [
-            'label' => 'authenticate',
+            'label' => 'Autentica',
         ],
         'downloadExample' => [
-            'label' => 'downloadExample',
+            'label' => 'Scarica esempio',
         ],
         'create' => [
-            'label' => 'create',
+            'label' => 'Crea',
         ],
         'createAnother' => [
-            'label' => 'createAnother',
+            'label' => 'Crea un altro',
         ],
     ],
 ];
