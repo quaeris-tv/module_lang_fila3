@@ -1,161 +1,3 @@
-<<<<<<< HEAD
-<?php return array (
-  'fields' => 
-  array (
-    'created_at' => 
-    array (
-      'label' => 'Data di creazione',
-      'placeholder' => 'Seleziona data',
-      'tooltip' => 'Data in cui è stato creato il record',
-    ),
-    'values' => 
-    array (
-      'label' => 'Valori',
-      'placeholder' => 'Inserisci i valori',
-      'tooltip' => 'Lista dei valori associati',
-    ),
-    'value' => 
-    array (
-      'label' => 'Valore',
-      'placeholder' => 'Inserisci un valore',
-      'tooltip' => 'Valore singolo',
-    ),
-    'email' => 
-    array (
-      'label' => 'Email',
-      'placeholder' => 'esempio@dominio.it',
-      'tooltip' => 'Indirizzo email valido',
-    ),
-    'password' => 
-    array (
-      'label' => 'Password',
-      'placeholder' => 'Inserisci la password',
-      'tooltip' => 'Password di accesso',
-    ),
-    'remember' => 
-    array (
-      'label' => 'Ricordami',
-      'tooltip' => 'Mantieni la sessione attiva',
-    ),
-    'description' => 
-    array (
-      'label' => 'Descrizione',
-      'placeholder' => 'Inserisci una descrizione',
-      'tooltip' => 'Breve descrizione dell\'elemento',
-    ),
-    'name' => 
-    array (
-      'label' => 'Nome',
-      'placeholder' => 'Inserisci il nome',
-      'tooltip' => 'Nome dell\'elemento',
-    ),
-    'id' => 
-    array (
-      'label' => 'ID',
-      'tooltip' => 'Identificativo univoco',
-    ),
-    'updated_at' => 
-    array (
-      'label' => 'Ultima modifica',
-      'tooltip' => 'Data dell\'ultima modifica',
-    ),
-    'workgroup' => 
-    array (
-      'denominazione' => 
-      array (
-        'label' => 'Gruppo di lavoro',
-        'placeholder' => 'Seleziona il gruppo',
-        'tooltip' => 'Gruppo di lavoro associato',
-      ),
-    ),
-    'data_inizio_esecuzione' => 
-    array (
-      'label' => 'Data inizio esecuzione',
-      'placeholder' => 'Seleziona la data di inizio',
-      'tooltip' => 'Data di inizio dell\'esecuzione',
-    ),
-    'data_fine_esecuzione' => 
-    array (
-      'label' => 'Data fine esecuzione',
-      'placeholder' => 'Seleziona la data di fine',
-      'tooltip' => 'Data di fine dell\'esecuzione',
-    ),
-    'toggleColumns' => 
-    array (
-      'label' => 'toggleColumns',
-    ),
-    'reorderRecords' => 
-    array (
-      'label' => 'reorderRecords',
-    ),
-    'resetFilters' => 
-    array (
-      'label' => 'resetFilters',
-    ),
-    'applyFilters' => 
-    array (
-      'label' => 'applyFilters',
-    ),
-    'openFilters' => 
-    array (
-      'label' => 'openFilters',
-    ),
-  ),
-  'actions' => 
-  array (
-    'save' => 
-    array (
-      'label' => 'Salva',
-      'tooltip' => 'Salva le modifiche',
-    ),
-    'cancel' => 
-    array (
-      'label' => 'Annulla',
-      'tooltip' => 'Annulla le modifiche',
-    ),
-    'create' => 
-    array (
-      'label' => 'Crea nuovo',
-      'tooltip' => 'Crea un nuovo elemento',
-    ),
-    'createAnother' => 
-    array (
-      'label' => 'Crea un altro',
-      'tooltip' => 'Crea un altro elemento dopo questo',
-    ),
-    'edit' => 
-    array (
-      'label' => 'Modifica',
-      'tooltip' => 'Modifica questo elemento',
-    ),
-    'delete' => 
-    array (
-      'label' => 'Elimina',
-      'tooltip' => 'Elimina questo elemento',
-    ),
-    'associate' => 
-    array (
-      'label' => 'Associa',
-      'tooltip' => 'Associa ad un elemento esistente',
-    ),
-    'dissociate' => 
-    array (
-      'label' => 'Dissocia',
-      'tooltip' => 'Rimuovi l\'associazione',
-    ),
-    'attach' => 
-    array (
-      'label' => 'Collega',
-      'tooltip' => 'Collega ad un elemento esistente',
-    ),
-    'detach' => 
-    array (
-      'label' => 'Scollega',
-      'tooltip' => 'Rimuovi il collegamento',
-    ),
-  ),
-);
-=======
 <?php
 
 declare(strict_types=1);
@@ -163,150 +5,149 @@ declare(strict_types=1);
 return [
     'fields' => [
         'created_at' => [
-            'fields' => 'created_at',
             'label' => 'Data di creazione',
-        ],
-        'values' => [
-            'fields' => 'values',
-            'label' => 'Valori',
-        ],
-        'value' => [
-            'label' => 'Valore',
-        ],
-        'email' => [
-            'label' => 'Email',
-        ],
-        'password' => [
-            'label' => 'Password',
-        ],
-        'remember' => [
-            'label' => 'Ricordami',
-        ],
-        'assetType' => [
-            'name' => [
-                'label' => 'Tipo di risorsa',
-            ],
-        ],
-        'description' => [
-            'label' => 'Descrizione',
-        ],
-        'parent_id' => [
-            'label' => 'ID genitore',
-        ],
-        'technician_name' => [
-            'label' => 'Nome tecnico',
-        ],
-        'serial_number' => [
-            'label' => 'Numero di serie',
-        ],
-        'brand' => [
-            'label' => 'Marca',
-        ],
-        'model' => [
-            'label' => 'Modello',
-        ],
-        'area' => [
-            'name' => [
-                'label' => 'Area',
-            ],
-        ],
-        'save' => [
-            'label' => 'Salva',
-        ],
-        'cancel' => [
-            'label' => 'Annulla',
-        ],
-        'creator' => [
-            'name' => [
-                'label' => 'Creatore',
-            ],
-        ],
-        'isActive' => [
-            'label' => 'Attivo',
-        ],
-        'password_expires_at' => [
-            'label' => 'Scadenza password',
-        ],
-        'email_verified_at' => [
-            'label' => 'Email verificata il',
-        ],
-        'file' => [
-            'label' => 'File',
+            'placeholder' => 'Seleziona data',
+            'tooltip' => 'Data in cui è stato creato il record',
         ],
         'updated_at' => [
             'label' => 'Ultima modifica',
+            'placeholder' => 'Seleziona data',
+            'tooltip' => 'Data dell\'ultima modifica',
         ],
         'name' => [
             'label' => 'Nome',
+            'placeholder' => 'Inserisci il nome',
+            'tooltip' => 'Nome dell\'elemento',
+        ],
+        'description' => [
+            'label' => 'Descrizione',
+            'placeholder' => 'Inserisci una descrizione',
+            'tooltip' => 'Breve descrizione dell\'elemento',
+        ],
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'esempio@dominio.it',
+            'tooltip' => 'Indirizzo email valido',
+        ],
+        'password' => [
+            'label' => 'Password',
+            'placeholder' => '••••••••',
+            'tooltip' => 'Password di accesso',
+        ],
+        'password_expires_at' => [
+            'label' => 'Scadenza password',
+            'placeholder' => 'Seleziona data',
+            'tooltip' => 'Data di scadenza della password',
+        ],
+        'email_verified_at' => [
+            'label' => 'Email verificata il',
+            'placeholder' => 'Data verifica',
+            'tooltip' => 'Data di verifica dell\'email',
+        ],
+        'remember' => [
+            'label' => 'Ricordami',
+            'tooltip' => 'Mantieni la sessione attiva',
         ],
         'id' => [
             'label' => 'ID',
+            'tooltip' => 'Identificativo univoco',
         ],
-        'roles' => [
-            'name' => [
-                'label' => 'roles.name',
+        'isActive' => [
+            'label' => 'Attivo',
+            'tooltip' => 'Indica se l\'elemento è attivo',
+        ],
+        'file' => [
+            'label' => 'File',
+            'placeholder' => 'Seleziona file',
+            'tooltip' => 'Seleziona un file da caricare',
+        ],
+        'workgroup' => [
+            'denominazione' => [
+                'label' => 'Gruppo di lavoro',
+                'placeholder' => 'Seleziona il gruppo',
+                'tooltip' => 'Gruppo di lavoro associato',
             ],
         ],
-        'role' => [
-            'name' => [
-                'label' => 'role.name',
-            ],
+        'data_inizio_esecuzione' => [
+            'label' => 'Data inizio esecuzione',
+            'placeholder' => 'Seleziona la data di inizio',
+            'tooltip' => 'Data di inizio dell\'esecuzione',
         ],
-        'teams' => [
-            'name' => [
-                'label' => 'teams.name',
-            ],
+        'data_fine_esecuzione' => [
+            'label' => 'Data fine esecuzione',
+            'placeholder' => 'Seleziona la data di fine',
+            'tooltip' => 'Data di fine dell\'esecuzione',
         ],
-        'applyFilters' => [
-            'label' => 'applyFilters',
-        ],
+        // Filtri e colonne
         'toggleColumns' => [
-            'label' => 'toggleColumns',
+            'label' => 'Gestisci colonne',
+            'tooltip' => 'Mostra/Nascondi colonne della tabella',
         ],
         'reorderRecords' => [
-            'label' => 'reorderRecords',
+            'label' => 'Riordina',
+            'tooltip' => 'Riordina gli elementi',
         ],
         'resetFilters' => [
-            'label' => 'resetFilters',
+            'label' => 'Reimposta filtri',
+            'tooltip' => 'Rimuovi tutti i filtri applicati',
+        ],
+        'applyFilters' => [
+            'label' => 'Applica filtri',
+            'tooltip' => 'Applica i filtri selezionati',
         ],
         'openFilters' => [
-            'label' => 'openFilters',
-        ],
-        'geocomplete' => [
-            'label' => 'geocomplete',
-        ],
-        'radius' => [
-            'label' => 'radius',
-        ],
-        'unit' => [
-            'label' => 'unit',
-        ],
-        'latitude' => [
-            'label' => 'latitude',
-        ],
-        'longitude' => [
-            'label' => 'longitude',
+            'label' => 'Filtri',
+            'tooltip' => 'Apri il pannello dei filtri',
         ],
     ],
     'actions' => [
         'save' => [
             'label' => 'Salva',
+            'tooltip' => 'Salva le modifiche',
         ],
         'cancel' => [
             'label' => 'Annulla',
-        ],
-        'authenticate' => [
-            'label' => 'Autentica',
-        ],
-        'downloadExample' => [
-            'label' => 'Scarica esempio',
+            'tooltip' => 'Annulla le modifiche',
         ],
         'create' => [
-            'label' => 'Crea',
+            'label' => 'Crea nuovo',
+            'tooltip' => 'Crea un nuovo elemento',
         ],
         'createAnother' => [
             'label' => 'Crea un altro',
+            'tooltip' => 'Crea un altro elemento dopo questo',
+        ],
+        'edit' => [
+            'label' => 'Modifica',
+            'tooltip' => 'Modifica questo elemento',
+        ],
+        'delete' => [
+            'label' => 'Elimina',
+            'tooltip' => 'Elimina questo elemento',
+        ],
+        'associate' => [
+            'label' => 'Associa',
+            'tooltip' => 'Associa ad un elemento esistente',
+        ],
+        'dissociate' => [
+            'label' => 'Dissocia',
+            'tooltip' => 'Rimuovi l\'associazione',
+        ],
+        'attach' => [
+            'label' => 'Collega',
+            'tooltip' => 'Collega ad un elemento esistente',
+        ],
+        'detach' => [
+            'label' => 'Scollega',
+            'tooltip' => 'Rimuovi il collegamento',
+        ],
+        'authenticate' => [
+            'label' => 'Accedi',
+            'tooltip' => 'Effettua l\'accesso',
+        ],
+        'downloadExample' => [
+            'label' => 'Scarica esempio',
+            'tooltip' => 'Scarica un file di esempio',
         ],
     ],
 ];
->>>>>>> origin/dev
