@@ -107,7 +107,7 @@ class LangServiceProvider extends XotBaseServiceProvider
             $component = app(AutoLabelAction::class)->execute($component);
             $component->iconButton();
             $component->icon('heroicon-o-plus');
-            
+
             // ->translateLabel()
             return $component;
         });
