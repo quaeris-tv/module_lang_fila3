@@ -3,234 +3,85 @@
   array (
     'created_at' => 
     array (
-      'fields' => 'created_at',
       'label' => 'Data di creazione',
+      'placeholder' => 'Seleziona data',
+      'tooltip' => 'Data in cui è stato creato il record',
     ),
     'values' => 
     array (
-      'fields' => 'values',
       'label' => 'Valori',
+      'placeholder' => 'Inserisci i valori',
+      'tooltip' => 'Lista dei valori associati',
     ),
     'value' => 
     array (
       'label' => 'Valore',
+      'placeholder' => 'Inserisci un valore',
+      'tooltip' => 'Valore singolo',
     ),
     'email' => 
     array (
       'label' => 'Email',
+      'placeholder' => 'esempio@dominio.it',
+      'tooltip' => 'Indirizzo email valido',
     ),
     'password' => 
     array (
       'label' => 'Password',
+      'placeholder' => 'Inserisci la password',
+      'tooltip' => 'Password di accesso',
     ),
     'remember' => 
     array (
       'label' => 'Ricordami',
-    ),
-    'assetType' => 
-    array (
-      'name' => 
-      array (
-        'label' => 'Tipo di risorsa',
-      ),
+      'tooltip' => 'Mantieni la sessione attiva',
     ),
     'description' => 
     array (
       'label' => 'Descrizione',
+      'placeholder' => 'Inserisci una descrizione',
+      'tooltip' => 'Breve descrizione dell\'elemento',
     ),
-    'parent_id' => 
+    'name' => 
     array (
-      'label' => 'ID genitore',
+      'label' => 'Nome',
+      'placeholder' => 'Inserisci il nome',
+      'tooltip' => 'Nome dell\'elemento',
     ),
-    'technician_name' => 
+    'id' => 
     array (
-      'label' => 'Nome tecnico',
-    ),
-    'serial_number' => 
-    array (
-      'label' => 'Numero di serie',
-    ),
-    'brand' => 
-    array (
-      'label' => 'Marca',
-    ),
-    'model' => 
-    array (
-      'label' => 'Modello',
-    ),
-    'area' => 
-    array (
-      'name' => 
-      array (
-        'label' => 'Area',
-      ),
-    ),
-    'save' => 
-    array (
-      'label' => 'Salva',
-    ),
-    'cancel' => 
-    array (
-      'label' => 'Annulla',
-    ),
-    'creator' => 
-    array (
-      'name' => 
-      array (
-        'label' => 'Creatore',
-      ),
-    ),
-    'isActive' => 
-    array (
-      'label' => 'Attivo',
-    ),
-    'password_expires_at' => 
-    array (
-      'label' => 'Scadenza password',
-    ),
-    'email_verified_at' => 
-    array (
-      'label' => 'Email verificata il',
-    ),
-    'file' => 
-    array (
-      'label' => 'File',
+      'label' => 'ID',
+      'tooltip' => 'Identificativo univoco',
     ),
     'updated_at' => 
     array (
       'label' => 'Ultima modifica',
-<<<<<<< HEAD
-    ),
-    'name' => 
-    array (
-      'label' => 'Nome',
-    ),
-    'id' => 
-    array (
-      'label' => 'ID',
-    ),
-    'roles' => 
-    array (
-      'name' => 
-      array (
-        'label' => 'roles.name',
-      ),
-    ),
-    'role' => 
-    array (
-      'name' => 
-      array (
-        'label' => 'role.name',
-      ),
-    ),
-    'teams' => 
-    array (
-      'name' => 
-      array (
-        'label' => 'teams.name',
-      ),
-    ),
-    'applyFilters' => 
-    array (
-      'label' => 'applyFilters',
-    ),
-    'toggleColumns' => 
-    array (
-      'label' => 'toggleColumns',
-    ),
-    'reorderRecords' => 
-    array (
-      'label' => 'reorderRecords',
-    ),
-    'resetFilters' => 
-    array (
-      'label' => 'resetFilters',
-    ),
-    'openFilters' => 
-    array (
-      'label' => 'openFilters',
-=======
->>>>>>> origin/dev
-    ),
-    'name' => 
-    array (
-      'label' => 'Nome',
-    ),
-    'id' => 
-    array (
-      'label' => 'ID',
-    ),
-<<<<<<< HEAD
-    'data_inizio_esecuzione' => 
-=======
-    'roles' => 
-    array (
-      'name' => 
-      array (
-        'label' => 'roles.name',
-      ),
-    ),
-    'role' => 
->>>>>>> origin/dev
-    array (
-      'name' => 
-      array (
-        'label' => 'role.name',
-      ),
-    ),
-    'teams' => 
-    array (
-      'name' => 
-      array (
-        'label' => 'teams.name',
-      ),
-    ),
-    'applyFilters' => 
-    array (
-      'label' => 'applyFilters',
-    ),
-    'toggleColumns' => 
-    array (
-      'label' => 'toggleColumns',
-    ),
-    'reorderRecords' => 
-    array (
-      'label' => 'reorderRecords',
-    ),
-    'resetFilters' => 
-    array (
-      'label' => 'resetFilters',
-    ),
-    'openFilters' => 
-    array (
-      'label' => 'openFilters',
-    ),
-    'geocomplete' => 
-    array (
-      'label' => 'geocomplete',
-    ),
-    'radius' => 
-    array (
-      'label' => 'radius',
-    ),
-    'unit' => 
-    array (
-      'label' => 'unit',
-    ),
-    'latitude' => 
-    array (
-      'label' => 'latitude',
-    ),
-    'longitude' => 
-    array (
-      'label' => 'longitude',
+      'tooltip' => 'Data dell\'ultima modifica',
     ),
     'workgroup' => 
     array (
       'denominazione' => 
       array (
-        'label' => 'workgroup.denominazione',
+        'label' => 'Gruppo di lavoro',
+        'placeholder' => 'Seleziona il gruppo',
+        'tooltip' => 'Gruppo di lavoro associato',
       ),
+    ),
+    'data_inizio_esecuzione' => 
+    array (
+      'label' => 'Data inizio esecuzione',
+      'placeholder' => 'Seleziona la data di inizio',
+      'tooltip' => 'Data di inizio dell\'esecuzione',
+    ),
+    'data_fine_esecuzione' => 
+    array (
+      'label' => 'Data fine esecuzione',
+      'placeholder' => 'Seleziona la data di fine',
+      'tooltip' => 'Data di fine dell\'esecuzione',
+    ),
+    'toggleColumns' => 
+    array (
+      'label' => 'toggleColumns',
     ),
   ),
   'actions' => 
@@ -238,26 +89,52 @@
     'save' => 
     array (
       'label' => 'Salva',
+      'tooltip' => 'Salva le modifiche',
     ),
     'cancel' => 
     array (
       'label' => 'Annulla',
-    ),
-    'authenticate' => 
-    array (
-      'label' => 'Autentica',
-    ),
-    'downloadExample' => 
-    array (
-      'label' => 'Scarica esempio',
+      'tooltip' => 'Annulla le modifiche',
     ),
     'create' => 
     array (
-      'label' => 'Crea',
+      'label' => 'Crea nuovo',
+      'tooltip' => 'Crea un nuovo elemento',
     ),
     'createAnother' => 
     array (
       'label' => 'Crea un altro',
+      'tooltip' => 'Crea un altro elemento dopo questo',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica',
+      'tooltip' => 'Modifica questo elemento',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina',
+      'tooltip' => 'Elimina questo elemento',
+    ),
+    'associate' => 
+    array (
+      'label' => 'Associa',
+      'tooltip' => 'Associa ad un elemento esistente',
+    ),
+    'dissociate' => 
+    array (
+      'label' => 'Dissocia',
+      'tooltip' => 'Rimuovi l\'associazione',
+    ),
+    'attach' => 
+    array (
+      'label' => 'Collega',
+      'tooltip' => 'Collega ad un elemento esistente',
+    ),
+    'detach' => 
+    array (
+      'label' => 'Scollega',
+      'tooltip' => 'Rimuovi il collegamento',
     ),
   ),
 );
