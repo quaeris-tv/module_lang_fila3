@@ -60,7 +60,7 @@ class AutoLabelAction
                 app(SaveTransAction::class)->execute($label_key, $label_value);
             }
             $component->label($label);
-            if(method_exists($component, 'tooltip')){
+            if (method_exists($component, 'tooltip')) {
                 $component->tooltip($label);
             }
         } else {
