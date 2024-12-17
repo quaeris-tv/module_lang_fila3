@@ -99,6 +99,7 @@
     'updated_at' => 
     array (
       'label' => 'Ultima modifica',
+<<<<<<< HEAD
     ),
     'name' => 
     array (
@@ -148,22 +149,81 @@
     'openFilters' => 
     array (
       'label' => 'openFilters',
+=======
+>>>>>>> origin/dev
     ),
-    'determina' => 
+    'name' => 
     array (
-      'label' => 'determina',
+      'label' => 'Nome',
     ),
-    'data_fine_esecuzione' => 
+    'id' => 
     array (
-      'label' => 'data_fine_esecuzione',
+      'label' => 'ID',
     ),
+<<<<<<< HEAD
     'data_inizio_esecuzione' => 
+=======
+    'roles' => 
     array (
-      'label' => 'data_inizio_esecuzione',
+      'name' => 
+      array (
+        'label' => 'roles.name',
+      ),
     ),
-    'data_aggiudicazione' => 
+    'role' => 
+>>>>>>> origin/dev
     array (
-      'label' => 'data_aggiudicazione',
+      'name' => 
+      array (
+        'label' => 'role.name',
+      ),
+    ),
+    'teams' => 
+    array (
+      'name' => 
+      array (
+        'label' => 'teams.name',
+      ),
+    ),
+    'applyFilters' => 
+    array (
+      'label' => 'applyFilters',
+    ),
+    'toggleColumns' => 
+    array (
+      'label' => 'toggleColumns',
+    ),
+    'reorderRecords' => 
+    array (
+      'label' => 'reorderRecords',
+    ),
+    'resetFilters' => 
+    array (
+      'label' => 'resetFilters',
+    ),
+    'openFilters' => 
+    array (
+      'label' => 'openFilters',
+    ),
+    'geocomplete' => 
+    array (
+      'label' => 'geocomplete',
+    ),
+    'radius' => 
+    array (
+      'label' => 'radius',
+    ),
+    'unit' => 
+    array (
+      'label' => 'unit',
+    ),
+    'latitude' => 
+    array (
+      'label' => 'latitude',
+    ),
+    'longitude' => 
+    array (
+      'label' => 'longitude',
     ),
     'workgroup' => 
     array (
