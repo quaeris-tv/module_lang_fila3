@@ -34,10 +34,10 @@ class AutoLabelAction
         $trans_key = app(GetTransKeyAction::class)->execute($class);
 
         if ($component instanceof Step) {
-            $val = $component->getLabel();
+            Assert::string($val = $component->getLabel());
             $label_tkey = $trans_key.'.steps.'.$val.'';
         } else {
-            $val = $component->getName();
+            Assert::string($val = $component->getName());
             $label_tkey = $trans_key.'.fields.'.$val.'';
         }
 
@@ -60,7 +60,7 @@ class AutoLabelAction
                 app(SaveTransAction::class)->execute($label_key, $label_value);
             }
             $component->label($label);
-            if(method_exists($component, 'tooltip')){
+            if (method_exists($component, 'tooltip')) {
                 $component->tooltip($label);
             }
         } else {
