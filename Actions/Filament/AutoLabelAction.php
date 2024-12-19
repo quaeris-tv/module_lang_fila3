@@ -7,6 +7,7 @@ namespace Modules\Lang\Actions\Filament;
 use Filament\Actions\Action;
 use Filament\Forms\Components\Field;
 use Filament\Forms\Components\Wizard\Step;
+use Filament\Tables\Actions\Action as TableAction;
 use Filament\Tables\Columns\Column;
 use Filament\Tables\Filters\BaseFilter;
 use Illuminate\Support\Arr;
@@ -23,9 +24,9 @@ class AutoLabelAction
      * Undocumented function.
      * return number of input added.
      *
-     * @param Field|BaseFilter|Column|Step|Action $component
+     * @param Field|BaseFilter|Column|Step|Action|TableAction $component
      *
-     * @return Field|BaseFilter|Column|Step|Action
+     * @return Field|BaseFilter|Column|Step|Action|TableAction
      */
     public function execute($component)
     {

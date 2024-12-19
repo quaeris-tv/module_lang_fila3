@@ -9,7 +9,6 @@ return [
             'placeholder' => 'Seleziona data',
             'tooltip' => 'Data in cui è stato creato il record',
         ],
-<<<<<<< HEAD
         'updated_at' => [
             'label' => 'Ultima modifica',
             'placeholder' => 'Seleziona data',
@@ -24,7 +23,7 @@ return [
             'label' => 'Descrizione',
             'placeholder' => 'Inserisci una descrizione',
             'tooltip' => 'Breve descrizione dell\'elemento',
-=======
+        ],
         'values' => [
             'label' => 'Valori',
             'placeholder' => 'Inserisci i valori',
@@ -34,7 +33,6 @@ return [
             'label' => 'Valore',
             'placeholder' => 'Inserisci un valore',
             'tooltip' => 'Valore singolo',
->>>>>>> origin/dev
         ],
         'email' => [
             'label' => 'Email',
@@ -43,8 +41,7 @@ return [
         ],
         'password' => [
             'label' => 'Password',
-<<<<<<< HEAD
-            'placeholder' => '••••••••',
+            'placeholder' => '\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022',
             'tooltip' => 'Password di accesso',
         ],
         'password_expires_at' => [
@@ -57,33 +54,14 @@ return [
             'placeholder' => 'Data verifica',
             'tooltip' => 'Data di verifica dell\'email',
         ],
-=======
-            'placeholder' => 'Inserisci la password',
-            'tooltip' => 'Password di accesso',
-        ],
->>>>>>> origin/dev
         'remember' => [
             'label' => 'Ricordami',
             'tooltip' => 'Mantieni la sessione attiva',
         ],
-<<<<<<< HEAD
-=======
-        'description' => [
-            'label' => 'Descrizione',
-            'placeholder' => 'Inserisci una descrizione',
-            'tooltip' => 'Breve descrizione dell\'elemento',
-        ],
-        'name' => [
-            'label' => 'Nome',
-            'placeholder' => 'Inserisci il nome',
-            'tooltip' => 'Nome dell\'elemento',
-        ],
->>>>>>> origin/dev
         'id' => [
             'label' => 'ID',
             'tooltip' => 'Identificativo univoco',
         ],
-<<<<<<< HEAD
         'isActive' => [
             'label' => 'Attivo',
             'tooltip' => 'Indica se l\'elemento è attivo',
@@ -92,11 +70,6 @@ return [
             'label' => 'File',
             'placeholder' => 'Seleziona file',
             'tooltip' => 'Seleziona un file da caricare',
-=======
-        'updated_at' => [
-            'label' => 'Ultima modifica',
-            'tooltip' => 'Data dell\'ultima modifica',
->>>>>>> origin/dev
         ],
         'workgroup' => [
             'denominazione' => [
@@ -115,7 +88,6 @@ return [
             'placeholder' => 'Seleziona la data di fine',
             'tooltip' => 'Data di fine dell\'esecuzione',
         ],
-<<<<<<< HEAD
         // Filtri e colonne
         'toggleColumns' => [
             'label' => 'Gestisci colonne',
@@ -136,22 +108,6 @@ return [
         'openFilters' => [
             'label' => 'Filtri',
             'tooltip' => 'Apri il pannello dei filtri',
-=======
-        'toggleColumns' => [
-            'label' => 'toggleColumns',
-        ],
-        'reorderRecords' => [
-            'label' => 'reorderRecords',
-        ],
-        'resetFilters' => [
-            'label' => 'resetFilters',
-        ],
-        'applyFilters' => [
-            'label' => 'applyFilters',
-        ],
-        'openFilters' => [
-            'label' => 'openFilters',
->>>>>>> origin/dev
         ],
     ],
     'actions' => [
@@ -195,7 +151,6 @@ return [
             'label' => 'Scollega',
             'tooltip' => 'Rimuovi il collegamento',
         ],
-<<<<<<< HEAD
         'authenticate' => [
             'label' => 'Accedi',
             'tooltip' => 'Effettua l\'accesso',
@@ -204,7 +159,5 @@ return [
             'label' => 'Scarica esempio',
             'tooltip' => 'Scarica un file di esempio',
         ],
-=======
->>>>>>> origin/dev
     ],
 ];
