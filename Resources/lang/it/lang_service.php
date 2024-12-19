@@ -132,6 +132,10 @@
     array (
       'label' => 'longitude',
     ),
+    'latitude' => 
+    array (
+      'label' => 'latitude',
+    ),
   ),
   'actions' => 
   array (
