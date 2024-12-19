@@ -111,6 +111,12 @@ return [
         'longitude' => [
             'label' => 'longitude',
         ],
+<<<<<<< HEAD
+=======
+        'latitude' => [
+            'label' => 'latitude',
+        ],
+>>>>>>> origin/dev
     ],
     'actions' => [
         'save' => [
