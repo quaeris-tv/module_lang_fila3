@@ -130,6 +130,10 @@
     array (
       'label' => 'data_aggiudicazione',
     ),
+    'recordId' => 
+    array (
+      'label' => 'recordId',
+    ),
   ),
   'actions' => 
   array (
