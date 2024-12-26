@@ -28,7 +28,7 @@ use Webmozart\Assert\Assert;
  */
 class LangServiceProvider extends XotBaseServiceProvider
 {
-    public string $module_name = 'lang';
+    public string $name = 'lang';
 
     protected string $module_dir = __DIR__;
 
@@ -67,7 +67,10 @@ class LangServiceProvider extends XotBaseServiceProvider
         Field::configureUsing(function (Field $component) {
             $component = app(AutoLabelAction::class)->execute($component);
             Assert::isInstanceOf($component, Field::class);
-            $component->validationMessages(__('user::validation'));
+            $validationMessages = __('user::validation');
+            if(is_array($validationMessages)) {
+                $component->validationMessages($validationMessages);
+            }
 
             return $component;
         });
