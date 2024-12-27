@@ -68,7 +68,7 @@ class LangServiceProvider extends XotBaseServiceProvider
             $component = app(AutoLabelAction::class)->execute($component);
             Assert::isInstanceOf($component, Field::class);
             $validationMessages = __('user::validation');
-            if(is_array($validationMessages)) {
+            if (is_array($validationMessages)) {
                 $component->validationMessages($validationMessages);
             }
 
