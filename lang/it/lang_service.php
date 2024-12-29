@@ -35,7 +35,7 @@ return [
             'tooltip' => 'Valore singolo',
         ],
         'email' => [
-            'label' => 'email',
+            'label' => 'Email',
             'placeholder' => 'esempio@dominio.it',
             'tooltip' => 'Indirizzo email valido',
         ],
@@ -55,7 +55,7 @@ return [
             'tooltip' => 'Data di verifica dell\'email',
         ],
         'remember' => [
-            'label' => 'remember',
+            'label' => 'Ricordami',
             'tooltip' => 'Mantieni la sessione attiva',
         ],
         'id' => [
@@ -89,7 +89,7 @@ return [
             'tooltip' => 'Data di fine dell\'esecuzione',
         ],
         'toggleColumns' => [
-            'label' => 'toggleColumns',
+            'label' => 'Gestisci colonne',
             'tooltip' => 'Mostra/Nascondi colonne della tabella',
         ],
         'reorderRecords' => [
@@ -113,6 +113,9 @@ return [
         ],
         'latitude' => [
             'label' => 'latitude',
+        ],
+        'unit' => [
+            'label' => 'unit',
         ],
     ],
     'actions' => [
@@ -157,7 +160,7 @@ return [
             'tooltip' => 'Rimuovi il collegamento',
         ],
         'authenticate' => [
-            'label' => 'authenticate',
+            'label' => 'Accedi',
             'tooltip' => 'Effettua l\'accesso',
         ],
         'downloadExample' => [
