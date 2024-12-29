@@ -1,17 +1,17 @@
-<?php return array (
-  'fields' => 
-  array (
-    'geocomplete' => 
-    array (
-      'label' => 'geocomplete',
-    ),
-    'radius' => 
-    array (
-      'label' => 'radius',
-    ),
-    'unit' => 
-    array (
-      'label' => 'unit',
-    ),
-  ),
-);
+<?php
+
+declare(strict_types=1);
+
+return [
+    'fields' => [
+        'geocomplete' => [
+            'label' => 'geocomplete',
+        ],
+        'radius' => [
+            'label' => 'radius',
+        ],
+        'unit' => [
+            'label' => 'unit',
+        ],
+    ],
+];
