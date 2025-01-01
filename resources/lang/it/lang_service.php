@@ -13,5 +13,13 @@
     array (
       'label' => 'unit',
     ),
+    'activity' => 
+    array (
+      'label' => 'activity',
+    ),
+    'notes' => 
+    array (
+      'label' => 'notes',
+    ),
   ),
 );
