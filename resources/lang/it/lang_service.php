@@ -37,5 +37,9 @@
     array (
       'label' => 'vat_number',
     ),
+    'tax_code' => 
+    array (
+      'label' => 'tax_code',
+    ),
   ),
 );
