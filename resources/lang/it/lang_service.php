@@ -1,221 +1,102 @@
-<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
 
 return [
     'fields' => [
+        'id' => [
+            'label' => 'ID',
+            'tooltip' => 'Identificativo univoco',
+        ],
+        'name' => [
+            'label' => 'Nome',
+            'placeholder' => 'Inserisci il nome',
+            'tooltip' => 'Nome dell\'elemento',
+        ],
+        'description' => [
+            'label' => 'Descrizione',
+            'placeholder' => 'Inserisci una descrizione',
+            'tooltip' => 'Breve descrizione dell\'elemento',
+        ],
+        'email' => [
+            'label' => 'Email',
+            'placeholder' => 'esempio@dominio.it',
+            'tooltip' => 'Indirizzo email valido',
+        ],
+        'password' => [
+            'label' => 'Password',
+            'placeholder' => '••••••••',
+            'tooltip' => 'Password di accesso',
+        ],
+        'created_at' => [
+            'label' => 'Data di creazione',
+            'placeholder' => 'Seleziona data',
+            'tooltip' => 'Data in cui è stato creato il record',
+        ],
+        'updated_at' => [
+            'label' => 'Ultima modifica',
+            'tooltip' => 'Data dell\'ultima modifica',
+        ],
         'geocomplete' => [
-            'label' => 'geocomplete',
+            'label' => 'Geolocalizzazione',
+            'tooltip' => 'Inserisci una posizione geografica',
         ],
         'radius' => [
-            'label' => 'radius',
+            'label' => 'Raggio',
+            'tooltip' => 'Raggio di ricerca',
         ],
         'unit' => [
-            'label' => 'unit',
+            'label' => 'Unità',
+            'tooltip' => 'Unità di misura',
+        ],
+        'isActive' => [
+            'label' => 'Attivo',
+            'tooltip' => 'Indica se l\'elemento è attivo',
+        ],
+        'file' => [
+            'label' => 'File',
+            'placeholder' => 'Seleziona file',
+            'tooltip' => 'Seleziona un file da caricare',
+        ],
+    ],
+    'actions' => [
+        'save' => [
+            'label' => 'Salva',
+            'tooltip' => 'Salva le modifiche',
+        ],
+        'cancel' => [
+            'label' => 'Annulla',
+            'tooltip' => 'Annulla le modifiche',
+        ],
+        'create' => [
+            'label' => 'Crea nuovo',
+            'tooltip' => 'Crea un nuovo elemento',
+        ],
+        'edit' => [
+            'label' => 'Modifica',
+            'tooltip' => 'Modifica questo elemento',
+        ],
+        'delete' => [
+            'label' => 'Elimina',
+            'tooltip' => 'Elimina questo elemento',
+        ],
+        'authenticate' => [
+            'label' => 'Accedi',
+            'tooltip' => 'Effettua l\'accesso',
+        ],
+    ],
+    'filters' => [
+        'reset' => [
+            'label' => 'Reimposta filtri',
+            'tooltip' => 'Reimposta tutti i filtri',
+        ],
+        'apply' => [
+            'label' => 'Applica filtri',
+            'tooltip' => 'Applica i filtri selezionati',
+        ],
+        'open' => [
+            'label' => 'Apri filtri',
+            'tooltip' => 'Mostra/Nascondi pannello filtri',
         ],
     ],
 ];
-=======
-<?php return array (
-  'fields' => 
-  array (
-    'created_at' => 
-    array (
-      'label' => 'Data di creazione',
-      'placeholder' => 'Seleziona data',
-      'tooltip' => 'Data in cui è stato creato il record',
-    ),
-    'updated_at' => 
-    array (
-      'label' => 'Ultima modifica',
-      'tooltip' => 'Data dell\'ultima modifica',
-    ),
-    'name' => 
-    array (
-      'label' => 'Nome',
-      'placeholder' => 'Inserisci il nome',
-      'tooltip' => 'Nome dell\'elemento',
-    ),
-    'description' => 
-    array (
-      'label' => 'Descrizione',
-      'placeholder' => 'Inserisci una descrizione',
-      'tooltip' => 'Breve descrizione dell\'elemento',
-    ),
-    'values' => 
-    array (
-      'label' => 'Valori',
-      'placeholder' => 'Inserisci i valori',
-      'tooltip' => 'Lista dei valori associati',
-    ),
-    'value' => 
-    array (
-      'label' => 'Valore',
-      'placeholder' => 'Inserisci un valore',
-      'tooltip' => 'Valore singolo',
-    ),
-    'email' => 
-    array (
-      'label' => 'Email',
-      'placeholder' => 'esempio@dominio.it',
-      'tooltip' => 'Indirizzo email valido',
-    ),
-    'password' => 
-    array (
-      'label' => 'Password',
-      'placeholder' => '••••••••',
-      'tooltip' => 'Password di accesso',
-    ),
-    'password_expires_at' => 
-    array (
-      'label' => 'Scadenza password',
-      'placeholder' => 'Seleziona data',
-      'tooltip' => 'Data di scadenza della password',
-    ),
-    'email_verified_at' => 
-    array (
-      'label' => 'Email verificata il',
-      'placeholder' => 'Data verifica',
-      'tooltip' => 'Data di verifica dell\'email',
-    ),
-    'remember' => 
-    array (
-      'label' => 'Ricordami',
-      'tooltip' => 'Mantieni la sessione attiva',
-    ),
-    'id' => 
-    array (
-      'label' => 'ID',
-      'tooltip' => 'Identificativo univoco',
-    ),
-    'isActive' => 
-    array (
-      'label' => 'Attivo',
-      'tooltip' => 'Indica se l\'elemento è attivo',
-    ),
-    'file' => 
-    array (
-      'label' => 'File',
-      'placeholder' => 'Seleziona file',
-      'tooltip' => 'Seleziona un file da caricare',
-    ),
-    'workgroup' => 
-    array (
-      'denominazione' => 
-      array (
-        'label' => 'Gruppo di lavoro',
-        'placeholder' => 'Seleziona il gruppo',
-        'tooltip' => 'Gruppo di lavoro associato',
-      ),
-    ),
-    'data_inizio_esecuzione' => 
-    array (
-      'label' => 'Data inizio esecuzione',
-      'placeholder' => 'Seleziona la data di inizio',
-      'tooltip' => 'Data di inizio dell\'esecuzione',
-    ),
-    'data_fine_esecuzione' => 
-    array (
-      'label' => 'Data fine esecuzione',
-      'placeholder' => 'Seleziona la data di fine',
-      'tooltip' => 'Data di fine dell\'esecuzione',
-    ),
-    'toggleColumns' => 
-    array (
-      'label' => 'toggleColumns',
-    ),
-    'reorderRecords' => 
-    array (
-      'label' => 'reorderRecords',
-    ),
-    'resetFilters' => 
-    array (
-      'label' => 'resetFilters',
-    ),
-    'applyFilters' => 
-    array (
-      'label' => 'applyFilters',
-    ),
-    'openFilters' => 
-    array (
-      'label' => 'openFilters',
-    ),
-    'determina' => 
-    array (
-      'label' => 'determina',
-    ),
-    'data_aggiudicazione' => 
-    array (
-      'label' => 'data_aggiudicazione',
-    ),
-    'recordId' => 
-    array (
-      'label' => 'recordId',
-    ),
-  ),
-  'actions' => 
-  array (
-    'save' => 
-    array (
-      'label' => 'Salva',
-      'tooltip' => 'Salva le modifiche',
-    ),
-    'cancel' => 
-    array (
-      'label' => 'Annulla',
-      'tooltip' => 'Annulla le modifiche',
-    ),
-    'create' => 
-    array (
-      'label' => 'Crea nuovo',
-      'tooltip' => 'Crea un nuovo elemento',
-    ),
-    'createAnother' => 
-    array (
-      'label' => 'Crea un altro',
-      'tooltip' => 'Crea un altro elemento dopo questo',
-    ),
-    'edit' => 
-    array (
-      'label' => 'Modifica',
-      'tooltip' => 'Modifica questo elemento',
-    ),
-    'delete' => 
-    array (
-      'label' => 'Elimina',
-      'tooltip' => 'Elimina questo elemento',
-    ),
-    'associate' => 
-    array (
-      'label' => 'Associa',
-      'tooltip' => 'Associa ad un elemento esistente',
-    ),
-    'dissociate' => 
-    array (
-      'label' => 'Dissocia',
-      'tooltip' => 'Rimuovi l\'associazione',
-    ),
-    'attach' => 
-    array (
-      'label' => 'Collega',
-      'tooltip' => 'Collega ad un elemento esistente',
-    ),
-    'detach' => 
-    array (
-      'label' => 'Scollega',
-      'tooltip' => 'Rimuovi il collegamento',
-    ),
-    'authenticate' => 
-    array (
-      'label' => 'Accedi',
-      'tooltip' => 'Effettua l\'accesso',
-    ),
-    'downloadExample' => 
-    array (
-      'label' => 'Scarica esempio',
-      'tooltip' => 'Scarica un file di esempio',
-    ),
-  ),
-);
->>>>>>> origin/dev
