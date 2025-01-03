@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 declare(strict_types=1);
@@ -5,54 +6,216 @@ declare(strict_types=1);
 return [
     'fields' => [
         'geocomplete' => [
-            'label' => 'Geocompletamento',
-            'tooltip' => 'Inserisci un indirizzo o una posizione geografica.',
-            'placeholder' => 'Es. Via Roma, Milano',
+            'label' => 'geocomplete',
         ],
         'radius' => [
-            'label' => 'Raggio',
-            'tooltip' => 'Specifica il raggio in cui effettuare la ricerca.',
-            'placeholder' => 'Es. 10 km',
+            'label' => 'radius',
         ],
         'unit' => [
-            'label' => 'Unità',
-            'tooltip' => 'Seleziona l\'unità di misura per il raggio.',
-            'placeholder' => 'Es. chilometri o miglia',
-        ],
-        'activity' => [
-            'label' => 'Attività',
-            'tooltip' => 'Indica l\'attività correlata.',
-            'placeholder' => 'Es. Sport, Lavoro, Altro',
-        ],
-        'notes' => [
-            'label' => 'Note',
-            'tooltip' => 'Aggiungi eventuali note aggiuntive.',
-            'placeholder' => 'Scrivi le tue note qui...',
-        ],
-        'end_date' => [
-            'label' => 'Data di Fine',
-            'tooltip' => 'Inserisci la data di termine per l\'attività.',
-            'placeholder' => 'GG/MM/AAAA',
-        ],
-        'failed_job_ids' => [
-            'label' => 'ID Job Falliti',
-            'tooltip' => 'Elenco degli ID dei job falliti (se presenti).',
-            'placeholder' => 'Es. 123, 456',
-        ],
-        'competent_health_unit' => [
-            'label' => 'Unità Sanitaria Competente',
-            'tooltip' => 'Specifica l\'unità sanitaria competente.',
-            'placeholder' => 'Inserisci il nome dell\'unità sanitaria',
-        ],
-        'vat_number' => [
-            'label' => 'Partita IVA',
-            'tooltip' => 'Inserisci la partita IVA dell\'azienda o dell\'utente.',
-            'placeholder' => 'Es. 12345678901',
-        ],
-        'tax_code' => [
-            'label' => 'Codice Fiscale',
-            'tooltip' => 'Inserisci il codice fiscale dell\'utente.',
-            'placeholder' => 'Es. RSSMRA85M01H501Z',
+            'label' => 'unit',
         ],
     ],
 ];
+=======
+<?php return array (
+  'fields' => 
+  array (
+    'created_at' => 
+    array (
+      'label' => 'Data di creazione',
+      'placeholder' => 'Seleziona data',
+      'tooltip' => 'Data in cui è stato creato il record',
+    ),
+    'updated_at' => 
+    array (
+      'label' => 'Ultima modifica',
+      'tooltip' => 'Data dell\'ultima modifica',
+    ),
+    'name' => 
+    array (
+      'label' => 'Nome',
+      'placeholder' => 'Inserisci il nome',
+      'tooltip' => 'Nome dell\'elemento',
+    ),
+    'description' => 
+    array (
+      'label' => 'Descrizione',
+      'placeholder' => 'Inserisci una descrizione',
+      'tooltip' => 'Breve descrizione dell\'elemento',
+    ),
+    'values' => 
+    array (
+      'label' => 'Valori',
+      'placeholder' => 'Inserisci i valori',
+      'tooltip' => 'Lista dei valori associati',
+    ),
+    'value' => 
+    array (
+      'label' => 'Valore',
+      'placeholder' => 'Inserisci un valore',
+      'tooltip' => 'Valore singolo',
+    ),
+    'email' => 
+    array (
+      'label' => 'Email',
+      'placeholder' => 'esempio@dominio.it',
+      'tooltip' => 'Indirizzo email valido',
+    ),
+    'password' => 
+    array (
+      'label' => 'Password',
+      'placeholder' => '••••••••',
+      'tooltip' => 'Password di accesso',
+    ),
+    'password_expires_at' => 
+    array (
+      'label' => 'Scadenza password',
+      'placeholder' => 'Seleziona data',
+      'tooltip' => 'Data di scadenza della password',
+    ),
+    'email_verified_at' => 
+    array (
+      'label' => 'Email verificata il',
+      'placeholder' => 'Data verifica',
+      'tooltip' => 'Data di verifica dell\'email',
+    ),
+    'remember' => 
+    array (
+      'label' => 'Ricordami',
+      'tooltip' => 'Mantieni la sessione attiva',
+    ),
+    'id' => 
+    array (
+      'label' => 'ID',
+      'tooltip' => 'Identificativo univoco',
+    ),
+    'isActive' => 
+    array (
+      'label' => 'Attivo',
+      'tooltip' => 'Indica se l\'elemento è attivo',
+    ),
+    'file' => 
+    array (
+      'label' => 'File',
+      'placeholder' => 'Seleziona file',
+      'tooltip' => 'Seleziona un file da caricare',
+    ),
+    'workgroup' => 
+    array (
+      'denominazione' => 
+      array (
+        'label' => 'Gruppo di lavoro',
+        'placeholder' => 'Seleziona il gruppo',
+        'tooltip' => 'Gruppo di lavoro associato',
+      ),
+    ),
+    'data_inizio_esecuzione' => 
+    array (
+      'label' => 'Data inizio esecuzione',
+      'placeholder' => 'Seleziona la data di inizio',
+      'tooltip' => 'Data di inizio dell\'esecuzione',
+    ),
+    'data_fine_esecuzione' => 
+    array (
+      'label' => 'Data fine esecuzione',
+      'placeholder' => 'Seleziona la data di fine',
+      'tooltip' => 'Data di fine dell\'esecuzione',
+    ),
+    'toggleColumns' => 
+    array (
+      'label' => 'toggleColumns',
+    ),
+    'reorderRecords' => 
+    array (
+      'label' => 'reorderRecords',
+    ),
+    'resetFilters' => 
+    array (
+      'label' => 'resetFilters',
+    ),
+    'applyFilters' => 
+    array (
+      'label' => 'applyFilters',
+    ),
+    'openFilters' => 
+    array (
+      'label' => 'openFilters',
+    ),
+    'determina' => 
+    array (
+      'label' => 'determina',
+    ),
+    'data_aggiudicazione' => 
+    array (
+      'label' => 'data_aggiudicazione',
+    ),
+    'recordId' => 
+    array (
+      'label' => 'recordId',
+    ),
+  ),
+  'actions' => 
+  array (
+    'save' => 
+    array (
+      'label' => 'Salva',
+      'tooltip' => 'Salva le modifiche',
+    ),
+    'cancel' => 
+    array (
+      'label' => 'Annulla',
+      'tooltip' => 'Annulla le modifiche',
+    ),
+    'create' => 
+    array (
+      'label' => 'Crea nuovo',
+      'tooltip' => 'Crea un nuovo elemento',
+    ),
+    'createAnother' => 
+    array (
+      'label' => 'Crea un altro',
+      'tooltip' => 'Crea un altro elemento dopo questo',
+    ),
+    'edit' => 
+    array (
+      'label' => 'Modifica',
+      'tooltip' => 'Modifica questo elemento',
+    ),
+    'delete' => 
+    array (
+      'label' => 'Elimina',
+      'tooltip' => 'Elimina questo elemento',
+    ),
+    'associate' => 
+    array (
+      'label' => 'Associa',
+      'tooltip' => 'Associa ad un elemento esistente',
+    ),
+    'dissociate' => 
+    array (
+      'label' => 'Dissocia',
+      'tooltip' => 'Rimuovi l\'associazione',
+    ),
+    'attach' => 
+    array (
+      'label' => 'Collega',
+      'tooltip' => 'Collega ad un elemento esistente',
+    ),
+    'detach' => 
+    array (
+      'label' => 'Scollega',
+      'tooltip' => 'Rimuovi il collegamento',
+    ),
+    'authenticate' => 
+    array (
+      'label' => 'Accedi',
+      'tooltip' => 'Effettua l\'accesso',
+    ),
+    'downloadExample' => 
+    array (
+      'label' => 'Scarica esempio',
+      'tooltip' => 'Scarica un file di esempio',
+    ),
+  ),
+);
+>>>>>>> origin/dev
