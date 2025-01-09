@@ -57,7 +57,7 @@ class AutoLabelAction
                 if ($label_key1 != $label1) {
                     $label_value = $label1;
                 }
-
+                
                 app(SaveTransAction::class)->execute($label_key, $label_value);
             }
             $component->label($label);
