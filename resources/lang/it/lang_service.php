@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php return array (
   'fields' => 
   array (
@@ -42,24 +41,9 @@
     array (
       'label' => 'tax_code',
     ),
+    'deleted_at' => 
+    array (
+      'label' => 'deleted_at',
+    ),
   ),
-);
-=======
-<?php
-
-declare(strict_types=1);
-
-return [
-    'fields' => [
-        'geocomplete' => [
-            'label' => 'geocomplete',
-        ],
-        'radius' => [
-            'label' => 'radius',
-        ],
-        'unit' => [
-            'label' => 'unit',
-        ],
-    ],
-];
->>>>>>> origin/dev
+);
