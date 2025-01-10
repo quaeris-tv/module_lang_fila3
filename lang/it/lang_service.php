@@ -144,6 +144,14 @@
     array (
       'label' => 'deleted_at',
     ),
+    'radius' => 
+    array (
+      'label' => 'radius',
+    ),
+    'geocomplete' => 
+    array (
+      'label' => 'geocomplete',
+    ),
   ),
   'actions' => 
   array (
