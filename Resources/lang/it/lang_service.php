@@ -1,5 +1,4 @@
-<?php 
-return array (
+<?php return array (
   'fields' => 
   array (
     'geocomplete' => 
@@ -42,5 +41,9 @@ return array (
     array (
       'label' => 'tax_code',
     ),
+    'deleted_at' => 
+    array (
+      'label' => 'deleted_at',
+    ),
   ),
-);
+);
