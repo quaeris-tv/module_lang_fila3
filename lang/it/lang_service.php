@@ -144,6 +144,7 @@
     array (
       'label' => 'deleted_at',
     ),
+<<<<<<< HEAD
     'radius' => 
     array (
       'label' => 'radius',
@@ -151,6 +152,50 @@
     'geocomplete' => 
     array (
       'label' => 'geocomplete',
+=======
+    'polizza_convenzione_pratica_scontos' => 
+    array (
+      'label' => 'polizza_convenzione_pratica_scontos',
+    ),
+    'data_pagamento' => 
+    array (
+      'label' => 'data_pagamento',
+    ),
+    'polizza_convenzione_istanza' => 
+    array (
+      'polizza_convenzione' => 
+      array (
+        'compagnia_assicurativa' => 
+        array (
+          'nome' => 
+          array (
+            'label' => 'polizza_convenzione_istanza.polizza_convenzione.compagnia_assicurativa.nome',
+          ),
+        ),
+        'nome' => 
+        array (
+          'label' => 'polizza_convenzione_istanza.polizza_convenzione.nome',
+        ),
+      ),
+    ),
+    'stato_pratica' => 
+    array (
+      'descrizione' => 
+      array (
+        'label' => 'stato_pratica.descrizione',
+      ),
+    ),
+    'cliente' => 
+    array (
+      'nominativo' => 
+      array (
+        'label' => 'cliente.nominativo',
+      ),
+    ),
+    'data_scadenza' => 
+    array (
+      'label' => 'data_scadenza',
+>>>>>>> cde792a (up)
     ),
   ),
   'actions' => 
