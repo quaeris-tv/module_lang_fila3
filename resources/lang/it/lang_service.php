@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 // Return an array with structured field configurations
 return [
     'fields' => [
