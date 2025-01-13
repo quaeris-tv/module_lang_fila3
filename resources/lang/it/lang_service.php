@@ -1,58 +1,6 @@
-<<<<<<< HEAD
-<?php return array (
-  'fields' => 
-  array (
-    'geocomplete' => 
-    array (
-      'label' => 'geocomplete',
-    ),
-    'radius' => 
-    array (
-      'label' => 'radius',
-    ),
-    'unit' => 
-    array (
-      'label' => 'unit',
-    ),
-    'activity' => 
-    array (
-      'label' => 'activity',
-    ),
-    'notes' => 
-    array (
-      'label' => 'notes',
-    ),
-    'end_date' => 
-    array (
-      'label' => 'end_date',
-    ),
-    'failed_job_ids' => 
-    array (
-      'label' => 'failed_job_ids',
-    ),
-    'competent_health_unit' => 
-    array (
-      'label' => 'competent_health_unit',
-    ),
-    'vat_number' => 
-    array (
-      'label' => 'vat_number',
-    ),
-    'tax_code' => 
-    array (
-      'label' => 'tax_code',
-    ),
-    'deleted_at' => 
-    array (
-      'label' => 'deleted_at',
-    ),
-  ),
-);
-=======
 <?php
 
-declare(strict_types=1);
-
+// Return an array with structured field configurations
 return [
     'fields' => [
         'id' => [
@@ -110,13 +58,38 @@ return [
             'tooltip' => 'Seleziona un file da caricare',
         ],
         'vat_number' => [
-            'label' => 'vat_number',
+            'label' => 'Numero di partita IVA',
+            'tooltip' => 'Inserisci la partita IVA',
+        ],
+        'tax_code' => [
+            'label' => 'Codice fiscale',
+            'tooltip' => 'Inserisci il codice fiscale',
         ],
         'activity' => [
-            'label' => 'activity',
+            'label' => 'Attività',
+            'tooltip' => 'Descrivi l\'attività',
         ],
         'failed_job_ids' => [
-            'label' => 'failed_job_ids',
+            'label' => 'ID Lavori falliti',
+            'tooltip' => 'Identificatori dei lavori falliti',
+        ],
+        'competent_health_unit' => [
+            'label' => 'Unità sanitaria competente',
+            'tooltip' => 'Specificare l\'unità sanitaria competente',
+        ],
+        'notes' => [
+            'label' => 'Note',
+            'placeholder' => 'Aggiungi note',
+            'tooltip' => 'Inserisci eventuali note aggiuntive',
+        ],
+        'end_date' => [
+            'label' => 'Data di fine',
+            'placeholder' => 'Seleziona una data di fine',
+            'tooltip' => 'Specifica la data di fine',
+        ],
+        'deleted_at' => [
+            'label' => 'Cancellato il',
+            'tooltip' => 'Data di cancellazione del record',
         ],
     ],
     'actions' => [
@@ -160,4 +133,3 @@ return [
         ],
     ],
 ];
->>>>>>> 357a9a1260616cca44d8ebf9c89006fd2d7fc6e6
