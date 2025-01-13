@@ -19,16 +19,13 @@ class SaveTransAction
     public function execute(string $key, int|string|array|\Illuminate\Contracts\Support\Htmlable|null $data): void
     {
         $cont = [];
-        
+
         $filename = app(GetTransPathAction::class)->execute($key);
-        
-       
-       
+
         if (! File::exists($filename)) {
-            
             app(SaveArrayAction::class)->execute(data: $cont, filename: $filename);
         }
-        
+
         try {
             $cont = File::getRequire($filename);
         } catch (\Exception $e) {
@@ -39,7 +36,7 @@ class SaveTransAction
                 'message' => $e->getMessage(),
             ]);
         }
-       
+
         if (! is_array($cont)) {
             $cont = [];
         }
@@ -54,7 +51,7 @@ class SaveTransAction
         if (! is_array($cont)) {
             throw new \Exception('Error in SaveTransAction');
         }
-        
+
         app(SaveArrayAction::class)->execute(data: $cont, filename: $filename);
     }
 }

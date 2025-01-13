@@ -34,7 +34,6 @@ class GetTransPathAction
         $lang = app()->getLocale();
         $relativePath = config('modules.paths.generator.lang.path');
         $lang_path = module_path($ns, $relativePath);
-       
 
         return $lang_path.'/'.$lang.'/'.$piece[0].'.php';
     }
