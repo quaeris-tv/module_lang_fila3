@@ -38,10 +38,14 @@ class AutoLabelAction
             return Str::startsWith($item['object']::class,'Modules\\');
             //return Str::startsWith($item['class'],'Modules\\');
         });
-        $class=$class['object']::class;
+        if(is_array($class)){
+            $object_class=$class['object']::class;
 
-        //Assert::string($class = Arr::get($backtrace, '5.class'));
-        $trans_key = app(GetTransKeyAction::class)->execute($class);
+            //Assert::string($class = Arr::get($backtrace, '5.class'));
+            $trans_key = app(GetTransKeyAction::class)->execute($object_class);
+        }else{
+            $trans_key = 'lang::txt';
+        }
         
         
         if ($component instanceof Step) {
