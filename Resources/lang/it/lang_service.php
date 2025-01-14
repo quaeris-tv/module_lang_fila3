@@ -1,137 +1,181 @@
 <?php
-
-declare(strict_types=1);
-
-// Return an array with structured field configurations
-return [
-    'fields' => [
-        'id' => [
-            'label' => 'ID',
-            'tooltip' => 'Identificativo univoco',
-        ],
-        'name' => [
-            'label' => 'Nome',
-            'placeholder' => 'Inserisci il nome',
-            'tooltip' => 'Nome dell\'elemento',
-        ],
-        'description' => [
-            'label' => 'Descrizione',
-            'placeholder' => 'Inserisci una descrizione',
-            'tooltip' => 'Breve descrizione dell\'elemento',
-        ],
-        'email' => [
-            'label' => 'Email',
-            'placeholder' => 'esempio@dominio.it',
-            'tooltip' => 'Indirizzo email valido',
-        ],
-        'password' => [
-            'label' => 'Password',
-            'placeholder' => '••••••••',
-            'tooltip' => 'Password di accesso',
-        ],
-        'created_at' => [
-            'label' => 'Data di creazione',
-            'placeholder' => 'Seleziona data',
-            'tooltip' => 'Data in cui è stato creato il record',
-        ],
-        'updated_at' => [
-            'label' => 'Ultima modifica',
-            'tooltip' => 'Data dell\'ultima modifica',
-        ],
-        'geocomplete' => [
-            'label' => 'Geolocalizzazione',
-            'tooltip' => 'Inserisci una posizione geografica',
-        ],
-        'radius' => [
-            'label' => 'Raggio',
-            'tooltip' => 'Raggio di ricerca',
-        ],
-        'unit' => [
-            'label' => 'Unità',
-            'tooltip' => 'Unità di misura',
-        ],
-        'isActive' => [
-            'label' => 'Attivo',
-            'tooltip' => 'Indica se l\'elemento è attivo',
-        ],
-        'file' => [
-            'label' => 'File',
-            'placeholder' => 'Seleziona file',
-            'tooltip' => 'Seleziona un file da caricare',
-        ],
-        'vat_number' => [
-            'label' => 'Numero di partita IVA',
-            'tooltip' => 'Inserisci la partita IVA',
-        ],
-        'tax_code' => [
-            'label' => 'Codice fiscale',
-            'tooltip' => 'Inserisci il codice fiscale',
-        ],
-        'activity' => [
-            'label' => 'Attività',
-            'tooltip' => 'Descrivi l\'attività',
-        ],
-        'failed_job_ids' => [
-            'label' => 'ID Lavori falliti',
-            'tooltip' => 'Identificatori dei lavori falliti',
-        ],
-        'competent_health_unit' => [
-            'label' => 'Unità sanitaria competente',
-            'tooltip' => 'Specificare l\'unità sanitaria competente',
-        ],
-        'notes' => [
-            'label' => 'Note',
-            'placeholder' => 'Aggiungi note',
-            'tooltip' => 'Inserisci eventuali note aggiuntive',
-        ],
-        'end_date' => [
-            'label' => 'Data di fine',
-            'placeholder' => 'Seleziona una data di fine',
-            'tooltip' => 'Specifica la data di fine',
-        ],
-        'deleted_at' => [
-            'label' => 'Cancellato il',
-            'tooltip' => 'Data di cancellazione del record',
-        ],
-    ],
-    'actions' => [
-        'save' => [
-            'label' => 'Salva',
-            'tooltip' => 'Salva le modifiche',
-        ],
-        'cancel' => [
-            'label' => 'Annulla',
-            'tooltip' => 'Annulla le modifiche',
-        ],
-        'create' => [
-            'label' => 'Crea nuovo',
-            'tooltip' => 'Crea un nuovo elemento',
-        ],
-        'edit' => [
-            'label' => 'Modifica',
-            'tooltip' => 'Modifica questo elemento',
-        ],
-        'delete' => [
-            'label' => 'Elimina',
-            'tooltip' => 'Elimina questo elemento',
-        ],
-        'authenticate' => [
-            'label' => 'Accedi',
-            'tooltip' => 'Effettua l\'accesso',
-        ],
-    ],
-    'filters' => [
-        'reset' => [
-            'label' => 'Reimposta filtri',
-            'tooltip' => 'Reimposta tutti i filtri',
-        ],
-        'apply' => [
-            'label' => 'Applica filtri',
-            'tooltip' => 'Applica i filtri selezionati',
-        ],
-        'open' => [
-            'label' => 'Apri filtri',
-            'tooltip' => 'Mostra/Nascondi pannello filtri',
-        ],
-    ],
-];
+return array (
+  'fields' =>
+  array (
+    'created_at' =>
+    array (
+      'fields' => 'created_at',
+      'label' => 'Data di creazione',
+    ),
+    'values' =>
+    array (
+      'fields' => 'values',
+      'label' => 'Valori',
+    ),
+    'value' =>
+    array (
+      'label' => 'Valore',
+    ),
+    'email' =>
+    array (
+      'label' => 'Email',
+    ),
+    'password' =>
+    array (
+      'label' => 'Password',
+    ),
+    'remember' =>
+    array (
+      'label' => 'Ricordami',
+    ),
+    'assetType' =>
+    array (
+      'name' =>
+      array (
+        'label' => 'Tipo di risorsa',
+      ),
+    ),
+    'description' =>
+    array (
+      'label' => 'Descrizione',
+    ),
+    'parent_id' =>
+    array (
+      'label' => 'ID genitore',
+    ),
+    'technician_name' =>
+    array (
+      'label' => 'Nome tecnico',
+    ),
+    'serial_number' =>
+    array (
+      'label' => 'Numero di serie',
+    ),
+    'brand' =>
+    array (
+      'label' => 'Marca',
+    ),
+    'model' =>
+    array (
+      'label' => 'Modello',
+    ),
+    'area' =>
+    array (
+      'name' =>
+      array (
+        'label' => 'Area',
+      ),
+    ),
+    'save' =>
+    array (
+      'label' => 'Salva',
+    ),
+    'cancel' =>
+    array (
+      'label' => 'Annulla',
+    ),
+    'creator' =>
+    array (
+      'name' =>
+      array (
+        'label' => 'Creatore',
+      ),
+    ),
+    'isActive' =>
+    array (
+      'label' => 'Attivo',
+    ),
+    'password_expires_at' =>
+    array (
+      'label' => 'Scadenza password',
+    ),
+    'email_verified_at' =>
+    array (
+      'label' => 'Email verificata il',
+    ),
+    'file' =>
+    array (
+      'label' => 'File',
+    ),
+    'updated_at' =>
+    array (
+      'label' => 'Ultima modifica',
+    ),
+    'name' =>
+    array (
+      'label' => 'Nome',
+    ),
+    'id' =>
+    array (
+      'label' => 'ID',
+    ),
+    'roles' =>
+    array (
+      'name' =>
+      array (
+        'label' => 'roles.name',
+      ),
+    ),
+    'role' =>
+    array (
+      'name' =>
+      array (
+        'label' => 'role.name',
+      ),
+    ),
+    'teams' =>
+    array (
+      'name' =>
+      array (
+        'label' => 'teams.name',
+      ),
+    ),
+    'applyFilters' =>
+    array (
+      'label' => 'applyFilters',
+    ),
+    'toggleColumns' =>
+    array (
+      'label' => 'toggleColumns',
+    ),
+    'reorderRecords' =>
+    array (
+      'label' => 'reorderRecords',
+    ),
+    'resetFilters' =>
+    array (
+      'label' => 'resetFilters',
+    ),
+    'openFilters' =>
+    array (
+      'label' => 'openFilters',
+    ),
+  ),
+  'actions' =>
+  array (
+    'save' =>
+    array (
+      'label' => 'Salva',
+    ),
+    'cancel' =>
+    array (
+      'label' => 'Annulla',
+    ),
+    'authenticate' =>
+    array (
+      'label' => 'Autentica',
+    ),
+    'downloadExample' =>
+    array (
+      'label' => 'Scarica esempio',
+    ),
+    'create' =>
+    array (
+      'label' => 'Crea',
+    ),
+    'createAnother' =>
+    array (
+      'label' => 'Crea un altro',
+    ),
+  ),
+);
