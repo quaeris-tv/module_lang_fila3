@@ -258,6 +258,10 @@
     array (
       'label' => 'activity',
     ),
+    'determina' => 
+    array (
+      'label' => 'determina',
+    ),
   ),
   'actions' => 
   array (
