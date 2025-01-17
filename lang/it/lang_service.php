@@ -262,6 +262,10 @@
     array (
       'label' => 'determina',
     ),
+    'data_aggiudicazione' => 
+    array (
+      'label' => 'data_aggiudicazione',
+    ),
   ),
   'actions' => 
   array (
