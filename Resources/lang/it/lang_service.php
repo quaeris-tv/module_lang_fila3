@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-<?php return array (
+<?php 
+return array (
   'fields' => 
   array (
     'geocomplete' => 
@@ -44,22 +44,3 @@
     ),
   ),
 );
-=======
-<?php
-
-declare(strict_types=1);
-
-return [
-    'fields' => [
-        'geocomplete' => [
-            'label' => 'geocomplete',
-        ],
-        'radius' => [
-            'label' => 'radius',
-        ],
-        'unit' => [
-            'label' => 'unit',
-        ],
-    ],
-];
->>>>>>> origin/dev
