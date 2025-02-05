@@ -94,6 +94,14 @@
     array (
       'label' => 'determina',
     ),
+    'matr' => 
+    array (
+      'label' => 'matr',
+    ),
+    'cognome' => 
+    array (
+      'label' => 'cognome',
+    ),
   ),
   'actions' => 
   array (
