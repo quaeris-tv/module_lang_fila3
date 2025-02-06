@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 return [
     'fields' => [
         'created_at' => [
@@ -113,15 +111,6 @@ return [
         ],
         'openFilters' => [
             'label' => 'openFilters',
-        ],
-        'determina' => [
-            'label' => 'determina',
-        ],
-        'matr' => [
-            'label' => 'matr',
-        ],
-        'cognome' => [
-            'label' => 'cognome',
         ],
     ],
     'actions' => [
