@@ -74,10 +74,10 @@ return [
         'data_scadenza' => [
             'label' => 'Data di scadenza',
         ],
-        'address' => [
+        'indirizzo' => [
             'label' => 'Indirizzo',
         ],
-        'phone' => [
+        'telefono' => [
             'label' => 'Telefono',
         ],
         'workgroup' => [
@@ -118,10 +118,10 @@ return [
             'tooltip' => 'Apri il pannello dei filtri',
         ],
         'longitude' => [
-            'label' => 'Longitude',
+            'label' => 'Longitudine',
         ],
         'latitude' => [
-            'label' => 'Latitude',
+            'label' => 'Latitudine',
         ],
         'unit' => [
             'label' => 'Unità',
@@ -160,64 +160,55 @@ return [
                 'label' => 'Nominativo cliente',
             ],
         ],
-        'data_scadenza' => [
-            'label' => 'Data di scadenza',
-        ],
         'roles' => [
             'name' => [
-                'label' => 'roles.name',
+                'label' => 'Nome ruolo',
             ],
         ],
         'competent_health_unit' => [
-            'label' => 'competent_health_unit',
+            'label' => 'Unità sanitaria competente',
         ],
         'tax_code' => [
-            'label' => 'tax_code',
+            'label' => 'Codice fiscale',
         ],
         'vat_number' => [
-            'label' => 'vat_number',
+            'label' => 'Partita IVA',
         ],
         'company_office' => [
-            'label' => 'company_office',
+            'label' => 'Sede aziendale',
         ],
         'business_closed' => [
-            'label' => 'business_closed',
+            'label' => 'Attività chiusa',
         ],
         'company_name' => [
-            'label' => 'company_name',
-        ],
-        'address' => [
-            'label' => 'address',
+            'label' => 'Nome azienda',
         ],
         'street_number' => [
-            'label' => 'street_number',
+            'label' => 'Numero civico',
         ],
         'province' => [
-            'label' => 'province',
+            'label' => 'Provincia',
         ],
         'postal_code' => [
-            'label' => 'postal_code',
-        ],
-        'phone' => [
-            'label' => 'phone',
+            'label' => 'CAP',
         ],
         'fax' => [
-            'label' => 'fax',
+            'label' => 'Fax',
         ],
         'mobile' => [
-            'label' => 'mobile',
+            'label' => 'Cellulare',
         ],
         'notes' => [
-            'label' => 'notes',
+            'label' => 'Note',
         ],
         'activity' => [
-            'label' => 'activity',
+            'label' => 'Attività',
         ],
         'determina' => [
-            'label' => 'determina',
+            'label' => 'Determina',
         ],
         'data_aggiudicazione' => [
-            'label' => 'data_aggiudicazione',
+            'label' => 'Data aggiudicazione',
         ],
     ],
     'actions' => [
