@@ -36,6 +36,7 @@ class Change extends Component
         unset($langs[$this->lang]);
         $this->url = Request::getRequestUri();
         $langs = Arr::map($langs, function (array $item, string $key) {
+            // @phpstan-ignore staticMethod.notFound
             $url = LaravelLocalization::getLocalizedURL($key, $this->url, [], true);
             if ($url !== false) {
                 $url = Str::of($url)->replace(url(''), '')->toString();
