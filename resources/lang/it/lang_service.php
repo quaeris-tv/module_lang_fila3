@@ -1,181 +1,133 @@
-<?php
-return array (
-  'fields' =>
+<?php return array (
+  'fields' => 
   array (
-    'created_at' =>
+    'created_at' => 
     array (
       'fields' => 'created_at',
-      'label' => 'Data di creazione',
+      'label' => 
+      array (
+        'fields' => 'created_at',
+      ),
     ),
-    'values' =>
+    'values' => 
     array (
       'fields' => 'values',
-      'label' => 'Valori',
-    ),
-    'value' =>
-    array (
-      'label' => 'Valore',
-    ),
-    'email' =>
-    array (
-      'label' => 'Email',
-    ),
-    'password' =>
-    array (
-      'label' => 'Password',
-    ),
-    'remember' =>
-    array (
-      'label' => 'Ricordami',
-    ),
-    'assetType' =>
-    array (
-      'name' =>
+      'label' => 
       array (
-        'label' => 'Tipo di risorsa',
+        'fields' => 'values',
       ),
     ),
-    'description' =>
+    'value' => 
     array (
-      'label' => 'Descrizione',
+      'label' => 'value',
     ),
-    'parent_id' =>
+    'email' => 
     array (
-      'label' => 'ID genitore',
+      'label' => 'email',
     ),
-    'technician_name' =>
+    'password' => 
     array (
-      'label' => 'Nome tecnico',
+      'label' => 'password',
     ),
-    'serial_number' =>
+    'remember' => 
     array (
-      'label' => 'Numero di serie',
+      'label' => 'remember',
     ),
-    'brand' =>
+    'assetType' => 
     array (
-      'label' => 'Marca',
-    ),
-    'model' =>
-    array (
-      'label' => 'Modello',
-    ),
-    'area' =>
-    array (
-      'name' =>
+      'name' => 
       array (
-        'label' => 'Area',
+        'label' => 'assetType.name',
       ),
     ),
-    'save' =>
+    'description' => 
     array (
-      'label' => 'Salva',
+      'label' => 'description',
     ),
-    'cancel' =>
+    'parent_id' => 
     array (
-      'label' => 'Annulla',
+      'label' => 'parent_id',
     ),
-    'creator' =>
+    'technician_name' => 
     array (
-      'name' =>
+      'label' => 'technician_name',
+    ),
+    'serial_number' => 
+    array (
+      'label' => 'serial_number',
+    ),
+    'brand' => 
+    array (
+      'label' => 'brand',
+    ),
+    'model' => 
+    array (
+      'label' => 'model',
+    ),
+    'area' => 
+    array (
+      'name' => 
       array (
-        'label' => 'Creatore',
+        'label' => 'area.name',
       ),
     ),
-    'isActive' =>
+    'save' => 
     array (
-      'label' => 'Attivo',
+      'label' => 'save',
     ),
-    'password_expires_at' =>
+    'cancel' => 
     array (
-      'label' => 'Scadenza password',
+      'label' => 'cancel',
     ),
-    'email_verified_at' =>
+    'creator' => 
     array (
-      'label' => 'Email verificata il',
-    ),
-    'file' =>
-    array (
-      'label' => 'File',
-    ),
-    'updated_at' =>
-    array (
-      'label' => 'Ultima modifica',
-    ),
-    'name' =>
-    array (
-      'label' => 'Nome',
-    ),
-    'id' =>
-    array (
-      'label' => 'ID',
-    ),
-    'roles' =>
-    array (
-      'name' =>
+      'name' => 
       array (
-        'label' => 'roles.name',
+        'label' => 'creator.name',
       ),
     ),
-    'role' =>
+    'updated_at' => 
     array (
-      'name' =>
-      array (
-        'label' => 'role.name',
-      ),
+      'label' => 'updated_at',
     ),
-    'teams' =>
+    'determina' => 
     array (
-      'name' =>
-      array (
-        'label' => 'teams.name',
-      ),
+      'label' => 'determina',
     ),
-    'applyFilters' =>
+    'matr' => 
     array (
-      'label' => 'applyFilters',
+      'label' => 'matr',
     ),
-    'toggleColumns' =>
+    'cognome' => 
     array (
-      'label' => 'toggleColumns',
-    ),
-    'reorderRecords' =>
-    array (
-      'label' => 'reorderRecords',
-    ),
-    'resetFilters' =>
-    array (
-      'label' => 'resetFilters',
-    ),
-    'openFilters' =>
-    array (
-      'label' => 'openFilters',
+      'label' => 'cognome',
     ),
   ),
-  'actions' =>
+  'actions' => 
   array (
-    'save' =>
+    'save' => 
     array (
-      'label' => 'Salva',
+      'label' => 'save',
     ),
-    'cancel' =>
+    'cancel' => 
     array (
-      'label' => 'Annulla',
+      'label' => 'cancel',
     ),
-    'authenticate' =>
+    'authenticate' => 
     array (
-      'label' => 'Autentica',
+      'label' => 'authenticate',
     ),
-    'downloadExample' =>
+    'downloadExample' => 
     array (
-      'label' => 'Scarica esempio',
+      'label' => 'downloadExample',
     ),
-    'create' =>
+    'create' => 
     array (
-      'label' => 'Crea',
+      'label' => 'create',
     ),
-    'createAnother' =>
+    'createAnother' => 
     array (
-      'label' => 'Crea un altro',
+      'label' => 'createAnother',
     ),
   ),
-);
+);
