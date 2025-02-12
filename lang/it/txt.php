@@ -20,5 +20,9 @@
     array (
       'label' => 'authenticate',
     ),
+    'login' => 
+    array (
+      'label' => 'login',
+    ),
   ),
 );
