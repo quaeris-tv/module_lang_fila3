@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "mcamara/laravel-localization": "*",
+        "mcamara/laravel-localization": "^2.2",
         "spatie/laravel-sluggable": "*"
     },
     "require-dev": {},
