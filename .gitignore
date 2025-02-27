@@ -62,6 +62,4 @@ cache/
 *.exe
 
 *:Zone.Identifier
-
-
 .php-cs-fixer.cache
