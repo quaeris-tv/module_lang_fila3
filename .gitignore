@@ -62,4 +62,9 @@ cache/
 *.exe
 
 *:Zone.Identifier
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8e542557 (up)
 .php-cs-fixer.cache
